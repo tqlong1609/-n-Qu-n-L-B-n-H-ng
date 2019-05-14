@@ -202,6 +202,7 @@
             this.txt_Id.BorderThickness = 3;
             this.txt_Id.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Id.Enabled = false;
             this.txt_Id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Id.ForeColor = System.Drawing.Color.White;
             this.txt_Id.isPassword = false;
@@ -336,6 +337,7 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // frm_AddProduct
             // 

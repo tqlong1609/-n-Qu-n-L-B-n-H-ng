@@ -27,6 +27,18 @@ namespace QuanLyCuaHang
             mMode = mode.add;
             load();
         }
+
+        public frm_AddProduct(string id)
+        {
+            InitializeComponent();
+            mMode = mode.repaid;
+            load();
+            this.id = id;
+            loadData();
+            btn_Add.Text = "Repaid";
+        }
+
+        #region load data
         // load 
         private void load()
         {
@@ -43,6 +55,7 @@ namespace QuanLyCuaHang
             DataTable tableCategory = bS_Products.loadDataIDCatagory();
             DataTable tableBlock = bS_Products.loadDataIDBlock();
             DataTable tableDetail = bS_Products.loadDataIDDetail();
+            DataTable tableProduct = bS_Products.loadDataIdProduct();
 
             foreach (DataRow dataRow in tableCategory.Rows)
             {
@@ -56,12 +69,14 @@ namespace QuanLyCuaHang
             {
                 cbx_IdDetail.AddItem(dataRow["IDDetail"].ToString().Trim());
             }
+            txt_Id.Text = "SP" + (tableProduct.Rows.Count + 1);
         }
-        // load data
+        // load data repaid
         private void loadData()
         {
 
         }
+        #endregion
         // check input data
         private bool isEmpty()
         {
@@ -78,19 +93,30 @@ namespace QuanLyCuaHang
                 return true;
             }
         }
+
+        #region handle click
+        // add/repaid click
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (!isEmpty())
+            if (mMode == mode.add)
             {
-                string error = "Error";
-                try
+                if (!isEmpty())
                 {
-                    bS_Products.addProduct(txt_Id.Text, cbx_IdCategory.selectedValue, txt_Name.Text, int.Parse(txt_Price.Text),
-                        cbx_IdBlock.selectedValue, cbx_IdDetail.selectedValue, path, ref error);
-                    this.Close();
+                    string error = "Error";
+                    try
+                    {
+                        bS_Products.addProduct(txt_Id.Text, cbx_IdCategory.selectedValue, txt_Name.Text, int.Parse(txt_Price.Text),
+                            cbx_IdBlock.selectedValue, cbx_IdDetail.selectedValue, path, ref error);
+                        this.Close();
+                    }
+                    catch (Exception) { MessageBox.Show(error); }
                 }
-                catch (Exception) { MessageBox.Show(error); }
             }
+            else
+            {
+                // repaid
+            }
+
         }
 
         private void btn_EditPhoto_Click(object sender, EventArgs e)
@@ -103,5 +129,11 @@ namespace QuanLyCuaHang
                 path = fileDialog.FileName;
             }
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
     }
 }

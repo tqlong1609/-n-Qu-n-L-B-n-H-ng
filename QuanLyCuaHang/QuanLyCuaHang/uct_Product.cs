@@ -29,11 +29,7 @@ namespace QuanLyCuaHang
             index = 0;
         }
 
-        private void btn_Add_Click(object sender, EventArgs e)
-        {
-            frm_AddProduct temp = new frm_AddProduct();
-            temp.ShowDialog();
-        }
+        #region load data
         // load data all
         private void loadDataAll()
         {
@@ -41,31 +37,16 @@ namespace QuanLyCuaHang
             dataGid_Device.Columns["Image"].Visible = false;
 
         }
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            loadDataAll();
-            typeDevice = TypeDevice.All;
-        }
         // load data laptop
         private void loadDataLaptop()
         {
             dataGid_Device.DataSource = product.loadLaptop();
             dataGid_Device.Columns["Image"].Visible = false;
         }
-        private void btn_EditAvatar_Click(object sender, EventArgs e)
-        {
-            loadDataLaptop();
-            typeDevice = TypeDevice.Laptop;
-        }
         // load smart phone
         private void loadSmartPhone()
         {
             dataGid_Device.DataSource = product.loadSmartPhone();
-        }
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            loadSmartPhone();
-            typeDevice = TypeDevice.SmartPhone;
         }
         // load extra device
         private void loadExtraDevice()
@@ -73,19 +54,92 @@ namespace QuanLyCuaHang
             dataGid_Device.DataSource = product.loadExtraDevice();
             typeDevice = TypeDevice.ExtraDevice;
         }
-
+        #endregion
+        
+        #region handle click
+        private void dataGid_Device_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+            if (index >= 0 && dataGid_Device.Rows.Count > 0)
+            {
+                pbx_Avatar.Image = product.loadImage(dataGid_Device.Rows[index].Cells[0].Value.ToString());
+            }
+        }
+        // tab smart phone
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            loadSmartPhone();
+            typeDevice = TypeDevice.SmartPhone;
+        }
+        // tab extra device
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             loadExtraDevice();
             typeDevice = TypeDevice.ExtraDevice;
         }
-
-        private void dataGid_Device_CellClick(object sender, DataGridViewCellEventArgs e)
+        // click image avatar
+        private void btn_EditAvatar_Click(object sender, EventArgs e)
         {
-            index = e.RowIndex;
+            loadDataLaptop();
+            typeDevice = TypeDevice.Laptop;
         }
+        // tab all
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            loadDataAll();
+            typeDevice = TypeDevice.All;
+        }
+        // add
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            frm_AddProduct temp = new frm_AddProduct();
+            temp.ShowDialog();
+        }
+        // delete
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            string error = "";
+            if (index >= 0 && dataGid_Device.Rows.Count > 0)
+            {
+                string id = dataGid_Device.Rows[index].Cells[0].Value.ToString();
+                if (id != null)
+                {
+                    if (MessageBox.Show("Are you sure ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                        == DialogResult.Yes)
+                    {
+                        if (product.removeProduct(id, ref error))
+                        {
+                            MessageBox.Show("Remove success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            switch (typeDevice)
+                            {
+                                case TypeDevice.Laptop:
+                                    loadDataLaptop();
+                                    break;
+                                case TypeDevice.ExtraDevice:
+                                    loadExtraDevice();
+                                    break;
+                                case TypeDevice.SmartPhone:
+                                    loadSmartPhone();
+                                    break;
+                                case TypeDevice.All:
+                                    loadDataAll();
+                                    break;
+                            }
+                        }
+                        else
+                            MessageBox.Show("Remove fail\n" + error, "fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        #endregion
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+        // repaid
+        private void btn_Repair_Click(object sender, EventArgs e)
         {
 
         }
