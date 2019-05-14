@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyCuaHang.BS_layer
 {
@@ -22,7 +23,7 @@ namespace QuanLyCuaHang.BS_layer
         public DataTable loadAll()
         {
             string sqlString = "select * from SANPHAM";
-            return dBMain.ExecuteQueryDataSet(sqlString,CommandType.Text);
+            return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
         // load product laptop
         public DataTable loadLaptop()
@@ -42,17 +43,6 @@ namespace QuanLyCuaHang.BS_layer
             string sqlString = "select * from SANPHAM where IDCategory = 'CATE3'";
             return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
-        // load image device
-        //public Image loadImage(string id)
-        //{
-        //    string sqlString = "select Image from SANPHAM where IDSanPham = '" + id + "'";
-        //    DataTable dataTable = dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
-        //    foreach (DataRow dataRow in dataTable.Rows)
-        //    {
-                
-        //    }
-        //    return ByteToImg(dBMain.ExecuteQueryDataSet(sqlString,CommandType.Text).Rows["Image"]);
-        //}
         // convert byte to image
         private Image ByteToImg(string byteString)
         {
@@ -61,6 +51,64 @@ namespace QuanLyCuaHang.BS_layer
             ms.Write(imgBytes, 0, imgBytes.Length);
             Image image = Image.FromStream(ms, true);
             return image;
+        }
+        // conver image to byte
+        private byte[] converImgToByte(string path)
+        {
+            FileStream fs;
+            fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            byte[] picbyte = new byte[fs.Length];
+            fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
+            fs.Close();
+            return picbyte;
+        }
+        // TO Do
+        // load data follow id
+        public void loadDataId(string id, ref string idCategory, ref string name, ref int Price, ref string idBlock,
+            ref string idDetail)
+        {
+            string sqlString = "select * from SANPHAM where IDDetail = '" + id +"'";
+            dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
+
+        }
+        public void addProduct(string id, string idCategory, string name, int Price, string idBlock,
+            string idDetail, string path, ref string error)
+        {
+            string sqlString;
+            if (path == null)
+            {
+                sqlString = "insert into SANPHAM (IDSanPham, IDCategory, Name, Price, IDBlock, IDDetail) " +
+                    "values ('" + id + "','" + idCategory + "',N'" + name + "'," + Price + ",'" + idBlock + "','" + idDetail + "')";
+            }
+            else
+            {
+                byte[] imgdata = converImgToByte(path);
+                sqlString = "insert into SANPHAM (IDSanPham, IDCategory, Name, Price, IDBlock, IDDetail,Image) " +
+                    "values('"+id+"', '"+idCategory+"', N'"+name+"', "+Price+", '"+idBlock+"', '"+idDetail+"', '"+ 
+                    Convert.ToBase64String(imgdata) + "')";
+            }
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                MessageBox.Show("Success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Fail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        // load id catagory
+        public DataTable loadDataIDCatagory()
+        {
+            string sqlString = "SELECT distinct IDCategory from SANPHAM";
+            return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
+        // load id block
+        public DataTable loadDataIDBlock()
+        {
+            string sqlString = "SELECT distinct IDBlock from SANPHAM";
+            return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
+        // load id detail
+        public DataTable loadDataIDDetail()
+        {
+            string sqlString = "SELECT distinct IDDetail from SANPHAM";
+            return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
     }
 }

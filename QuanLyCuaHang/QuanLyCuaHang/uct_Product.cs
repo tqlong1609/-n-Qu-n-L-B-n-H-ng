@@ -83,6 +83,10 @@ namespace QuanLyCuaHang
         private void dataGid_Device_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
 
         }
     }

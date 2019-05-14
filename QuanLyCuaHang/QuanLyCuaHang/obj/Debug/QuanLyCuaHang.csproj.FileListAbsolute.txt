@@ -53,3 +53,32 @@ L:\QuanLyStore-With-Bunifu-master\QuanLyStore-With-Bunifu-master\QuanLyCuaHang\Q
 L:\QuanLyStore-With-Bunifu-master\QuanLyStore-With-Bunifu-master\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.CopyComplete
 L:\QuanLyStore-With-Bunifu-master\QuanLyStore-With-Bunifu-master\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.exe
 L:\QuanLyStore-With-Bunifu-master\QuanLyStore-With-Bunifu-master\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.pdb
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.exe.config
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.exe
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.pdb
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csprojAssemblyReference.cache
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_AddBlock.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_AddCustomer.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_AddEmployee.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_AddProduct.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_Main.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_Login.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_MainEmployee.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_MainWarehouseStaff.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Properties.Resources.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Block.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Customer.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Employee.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Help.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_History.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Info.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Notification.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Product.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_ProductView.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_Profile.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.uct_SellProduct.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.GenerateResource.cache
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.CoreCompileInputs.cache
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.CopyComplete
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.exe
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.pdb
