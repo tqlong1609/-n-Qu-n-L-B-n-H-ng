@@ -101,47 +101,72 @@ namespace QuanLyCuaHang
             string error = "";
             if (index >= 0 && dataGid_Device.Rows.Count > 0)
             {
-                string id = dataGid_Device.Rows[index].Cells[0].Value.ToString();
-                if (id != null)
+                try
                 {
-                    if (MessageBox.Show("Are you sure ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                        == DialogResult.Yes)
+                    string id = dataGid_Device.Rows[index].Cells[0].Value.ToString();
+                    if (id != null)
                     {
-                        if (product.removeProduct(id, ref error))
+                        if (MessageBox.Show("Are you sure ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                            == DialogResult.Yes)
                         {
-                            MessageBox.Show("Remove success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            switch (typeDevice)
+                            if (product.removeProduct(id, ref error))
                             {
-                                case TypeDevice.Laptop:
-                                    loadDataLaptop();
-                                    break;
-                                case TypeDevice.ExtraDevice:
-                                    loadExtraDevice();
-                                    break;
-                                case TypeDevice.SmartPhone:
-                                    loadSmartPhone();
-                                    break;
-                                case TypeDevice.All:
-                                    loadDataAll();
-                                    break;
+                                MessageBox.Show("Remove success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                checkLoadProduct();
                             }
+                            else
+                                MessageBox.Show("Remove fail\n" + error, "fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        else
-                            MessageBox.Show("Remove fail\n" + error, "fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                catch (Exception) { };
             }
-        }
-        #endregion
-
-        private void bunifuTileButton1_Click(object sender, EventArgs e)
-        {
-
         }
         // repaid
         private void btn_Repair_Click(object sender, EventArgs e)
         {
+            if (index >= 0 && dataGid_Device.Rows.Count > 0)
+            {
+                new frm_AddProduct(dataGid_Device.Rows[index].Cells[0].Value.ToString()).ShowDialog();
+            }
+        }
+        #endregion
 
+        // check load product
+        private void checkLoadProduct()
+        {
+            switch (typeDevice)
+            {
+                case TypeDevice.Laptop:
+                    loadDataLaptop();
+                    break;
+                case TypeDevice.ExtraDevice:
+                    loadExtraDevice();
+                    break;
+                case TypeDevice.SmartPhone:
+                    loadSmartPhone();
+                    break;
+                case TypeDevice.All:
+                    loadDataAll();
+                    break;
+            }
+        }
+        // show form detail product
+        private void btn_ShowDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Search_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Search.Text != "")
+            {
+                dataGid_Device.DataSource = product.searchProducts(txt_Search.Text.Trim());
+            }
+            else
+            {
+                checkLoadProduct();
+            }
         }
     }
 }

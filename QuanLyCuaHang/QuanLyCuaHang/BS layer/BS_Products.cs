@@ -21,6 +21,24 @@ namespace QuanLyCuaHang.BS_layer
         }
 
         #region load data
+        // load data follow id
+        public void loadDataId(string id, ref string idCategory, ref string name, ref int Price, ref string idBlock,
+            ref string idDetail, ref Image image)
+        {
+            string sqlString = "select * from SANPHAM where IDSanPham = '" + id + "'";
+            DataTable dataTable = dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                idCategory = dataRow["IDCategory"].ToString().Trim();
+                name = dataRow["Name"].ToString().Trim();
+                Price = int.Parse(dataRow["Price"].ToString().Trim());
+                idBlock = dataRow["IDBlock"].ToString().Trim();
+                idCategory = dataRow["IDCategory"].ToString().Trim();
+                idDetail = dataRow["IDDetail"].ToString().Trim();
+                if(dataRow["Image"].ToString().Trim() != "")
+                    image = ByteToImg(dataRow["Image"].ToString().Trim());
+            }
+        }
         // load image from id
         public Image loadImage(string id)
         {
@@ -29,6 +47,8 @@ namespace QuanLyCuaHang.BS_layer
             string pathImg = "";
             foreach(DataRow dataRow in dataTable.Rows)
             {
+                if (dataRow["Image"].ToString().Trim() == "")
+                    return null;
                 pathImg = dataRow["Image"].ToString().Trim();
             }
             return ByteToImg(pathImg);
@@ -82,6 +102,7 @@ namespace QuanLyCuaHang.BS_layer
         #endregion
 
         #region load id
+
         // load id catagory
         public DataTable loadDataIDCatagory()
         {
@@ -137,22 +158,36 @@ namespace QuanLyCuaHang.BS_layer
             else
                 MessageBox.Show("Fail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        // load data follow id
-        public void loadDataId(string id, ref string idCategory, ref string name, ref int Price, ref string idBlock,
-            ref string idDetail,ref Image image)
+        // repaid
+        public void repaidProduct(string id, string idcategory, string name, string price, string idblock,
+            string detail, string path, ref string error)
         {
-            string sqlString = "select * from SANPHAM where IDDetail = '" + id + "'";
-            DataTable dataTable = dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
-            foreach (DataRow dataRow in dataTable.Rows)
+            string sqlString = "";
+            if (path == null)
             {
-                idCategory = dataRow["IDCategory"].ToString().Trim();
-                name = dataRow["Name"].ToString().Trim();
-                Price = int.Parse(dataRow["Price"].ToString().Trim());
-                idBlock = dataRow["IDBlock"].ToString().Trim();
-                idCategory = dataRow["IDCategory"].ToString().Trim();
-                idDetail = dataRow["IDDetail"].ToString().Trim();
-                image = ByteToImg(dataRow["Image"].ToString().Trim());
+                sqlString = "update SANPHAM set IDCategory = '" + idcategory + "', Name = N'" + name + "', Price = " + price + "," +
+                    " IDBlock = '" + idblock + "', IDDetail = '" + detail + "' " +
+                    "where IDSanPham = '" + id + "'";
             }
+            else
+            {
+                byte[] imgdata = converImgToByte(path);
+                sqlString = "update SANPHAM set IDCategory = '" + idcategory + "', Name = N'" + name + "', " +
+                    "Price = " + price + ", " +"IDBlock = '" + idblock + "', IDDetail = '" + detail + "'," +
+                    " Image = '"+Convert.ToBase64String(imgdata)+"' where IDSanPham = '" + id + "'";
+            }
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                MessageBox.Show("Success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Fail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        // search
+        public DataTable searchProducts(string _search)
+        {
+            return dBMain.ExecuteQueryDataSet("select * from SANPHAM " +
+                "where IDSanPham like '"+_search+"%' or IDCategory like '"+_search+"%' " +
+                "or Name like N'"+_search+"%' or IDBlock like '"+_search+"%' " +
+                "or IDDetail like '"+_search+"%'", CommandType.Text);
         }
         #endregion
     }

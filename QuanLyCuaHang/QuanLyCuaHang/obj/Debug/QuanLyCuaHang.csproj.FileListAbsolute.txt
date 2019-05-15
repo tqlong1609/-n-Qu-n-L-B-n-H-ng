@@ -82,3 +82,6 @@ C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLy
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csproj.CopyComplete
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.exe
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.pdb
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\Microsoft.ReportViewer.WebForms.DLL

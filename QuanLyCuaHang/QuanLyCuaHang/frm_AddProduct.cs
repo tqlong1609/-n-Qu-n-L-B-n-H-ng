@@ -21,13 +21,14 @@ namespace QuanLyCuaHang
 
         private enum mode { add, repaid }
 
+        // contrustor add
         public frm_AddProduct()
         {
             InitializeComponent();
             mMode = mode.add;
             load();
         }
-
+        // contrustor repaid
         public frm_AddProduct(string id)
         {
             InitializeComponent();
@@ -74,7 +75,45 @@ namespace QuanLyCuaHang
         // load data repaid
         private void loadData()
         {
-
+            txt_Id.Text = id;
+            string idCategory = "";
+            string name = "";
+            int price = 0;
+            string block = "";
+            string idDetail = "";
+            Image avatar = null;
+            bS_Products.loadDataId(id, ref idCategory, ref name, ref price, ref block, ref idDetail, ref avatar);
+            int j = 0;
+            foreach (string i in cbx_IdCategory.Items)
+            {
+                if (i.Equals(idCategory))
+                {
+                    cbx_IdCategory.selectedIndex = j; break;
+                }
+                j++;
+            }
+            j = 0;
+            foreach (string i in cbx_IdBlock.Items)
+            {
+                if (i.Equals(block))
+                {
+                    cbx_IdBlock.selectedIndex = j; break;
+                }
+                j++;
+            }
+            j = 0;
+            foreach (string i in cbx_IdDetail.Items)
+            {
+                if (i.Equals(idDetail))
+                {
+                    cbx_IdDetail.selectedIndex = j; break;
+                }
+                j++;
+            }
+            txt_Name.Text = name;
+            txt_Price.Text = price.ToString();
+            if(avatar != null)
+                pbx_Avatar.Image = avatar;
         }
         #endregion
         // check input data
@@ -100,6 +139,7 @@ namespace QuanLyCuaHang
         {
             if (mMode == mode.add)
             {
+                // add
                 if (!isEmpty())
                 {
                     string error = "Error";
@@ -111,10 +151,23 @@ namespace QuanLyCuaHang
                     }
                     catch (Exception) { MessageBox.Show(error); }
                 }
+                else MessageBox.Show("Request enter full","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
                 // repaid
+                if (!isEmpty())
+                {
+                    string error = "Error";
+                    try
+                    {
+                        bS_Products.repaidProduct(id, cbx_IdCategory.selectedValue, txt_Name.Text, txt_Price.Text, cbx_IdBlock.selectedValue,
+                            cbx_IdDetail.selectedValue, path, ref error);
+                        this.Close();
+                    }
+                    catch (Exception) { MessageBox.Show(error); }
+                }
+                else MessageBox.Show("Request enter full", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
