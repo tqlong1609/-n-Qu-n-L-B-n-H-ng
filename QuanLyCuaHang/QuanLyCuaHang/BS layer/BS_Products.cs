@@ -21,6 +21,11 @@ namespace QuanLyCuaHang.BS_layer
         }
 
         #region load data
+        // load data product detail
+        public DataTable loadDataProductDetail()
+        {
+            return dBMain.ExecuteQueryDataSet("Select * from DETAIL", CommandType.Text);
+        }
         // load data follow id
         public void loadDataId(string id, ref string idCategory, ref string name, ref int Price, ref string idBlock,
             ref string idDetail, ref Image image)
@@ -35,7 +40,7 @@ namespace QuanLyCuaHang.BS_layer
                 idBlock = dataRow["IDBlock"].ToString().Trim();
                 idCategory = dataRow["IDCategory"].ToString().Trim();
                 idDetail = dataRow["IDDetail"].ToString().Trim();
-                if(dataRow["Image"].ToString().Trim() != "")
+                if (dataRow["Image"].ToString().Trim() != "")
                     image = ByteToImg(dataRow["Image"].ToString().Trim());
             }
         }
@@ -45,7 +50,7 @@ namespace QuanLyCuaHang.BS_layer
             string sqlString = "select Image from SANPHAM where IDSanPham = '" + id + "'";
             DataTable dataTable = dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
             string pathImg = "";
-            foreach(DataRow dataRow in dataTable.Rows)
+            foreach (DataRow dataRow in dataTable.Rows)
             {
                 if (dataRow["Image"].ToString().Trim() == "")
                     return null;
@@ -131,7 +136,7 @@ namespace QuanLyCuaHang.BS_layer
 
         #region handle
         // delete product
-        public bool removeProduct(string id,ref string error)
+        public bool removeProduct(string id, ref string error)
         {
             string sqlString = "delete from SANPHAM where IDSanPham = '" + id + "'";
             return dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error);
@@ -173,8 +178,8 @@ namespace QuanLyCuaHang.BS_layer
             {
                 byte[] imgdata = converImgToByte(path);
                 sqlString = "update SANPHAM set IDCategory = '" + idcategory + "', Name = N'" + name + "', " +
-                    "Price = " + price + ", " +"IDBlock = '" + idblock + "', IDDetail = '" + detail + "'," +
-                    " Image = '"+Convert.ToBase64String(imgdata)+"' where IDSanPham = '" + id + "'";
+                    "Price = " + price + ", " + "IDBlock = '" + idblock + "', IDDetail = '" + detail + "'," +
+                    " Image = '" + Convert.ToBase64String(imgdata) + "' where IDSanPham = '" + id + "'";
             }
             if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
                 MessageBox.Show("Success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -185,9 +190,76 @@ namespace QuanLyCuaHang.BS_layer
         public DataTable searchProducts(string _search)
         {
             return dBMain.ExecuteQueryDataSet("select * from SANPHAM " +
-                "where IDSanPham like '"+_search+"%' or IDCategory like '"+_search+"%' " +
-                "or Name like N'"+_search+"%' or IDBlock like '"+_search+"%' " +
-                "or IDDetail like '"+_search+"%'", CommandType.Text);
+                "where IDSanPham like '" + _search + "%' or IDCategory like '" + _search + "%' " +
+                "or Name like N'" + _search + "%' or IDBlock like '" + _search + "%' " +
+                "or IDDetail like '" + _search + "%'", CommandType.Text);
+        }
+        #endregion
+
+        #region detail product
+        // add detail product
+        public void AddDetailProduct(string id, string screen, string frontCam, string backCam, string os,
+            string ram, string rom, string battery, string chip, ref string error)
+        {
+            string sqlString = "insert into DETAIL (IDDetail, ManHinh, CameraTruoc, CameraSau, OS, Ram, Rom, DungLuongPin, Chip) " +
+                "values('" + id + "', N'" + screen + "', '" + frontCam + "', '" + backCam + "', '" + os + "', '" +
+                ram + "', '" + rom + "', '" + battery + "', '" + chip + "')";
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+            {
+                MessageBox.Show("Add success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else MessageBox.Show("Fail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        // check exist id detail
+        public bool isExistIDDetail(string id)
+        {
+            DataTable dataTable = dBMain.ExecuteQueryDataSet("select IDDetail from DETAIL", CommandType.Text);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                if (id.Equals(dataRow["IDDetail"].ToString().Trim().ToLower()))
+                    return true;
+            }
+            return false;
+        }
+        // remove id detail
+        public bool removeDetailProduct(string id,ref string error)
+        {
+            string sqlString = "delete from DETAIL where IDDetail = '"+id+"'";
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                return true;
+            return false;
+        }
+        // load data detail from id
+        public void loadDataDetail(string id,ref string screen, ref string frontCam, ref string backCam, ref string os, 
+            ref string ram, ref string rom, ref string battery, ref string chip)
+        {
+            DataTable data;
+            string sqlString = "select * from DETAIL where IDDetail = '"+id+"'";
+            if ((data = dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text)) != null)
+            {
+                foreach (DataRow dataRow in data.Rows)
+                {
+                    screen = dataRow["ManHinh"].ToString().Trim();
+                    frontCam = dataRow["CameraTruoc"].ToString().Trim();
+                    backCam = dataRow["CameraSau"].ToString().Trim();
+                    os = dataRow["OS"].ToString().Trim();
+                    ram = dataRow["Ram"].ToString().Trim();
+                    rom = dataRow["Rom"].ToString().Trim();
+                    battery = dataRow["DungLuongPin"].ToString().Trim();
+                    chip = dataRow["Chip"].ToString().Trim();
+                }
+            }
+        }
+        // update product detail
+        public bool repaidProductDetail(string id, string screen, string frontCam, string backCam, string os, string ram,
+            string rom, string battery, string chip, ref string error)
+        {
+            string sqlString = "update DETAIL set ManHinh = N'"+screen+"', CameraTruoc = '"+frontCam+"'," +
+                " CameraSau = '"+backCam+"', " +"OS = '"+os+"',Ram = '"+ram+"', Rom = '"+rom+"'," +
+                "DungLuongPin = '"+battery+"', Chip = '"+chip+"' where IDDetail = '"+id+"'";
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                return true;
+            return false;
         }
         #endregion
     }

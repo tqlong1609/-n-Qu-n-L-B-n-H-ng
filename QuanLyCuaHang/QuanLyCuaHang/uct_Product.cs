@@ -154,7 +154,7 @@ namespace QuanLyCuaHang
         // show form detail product
         private void btn_ShowDetail_Click(object sender, EventArgs e)
         {
-
+            new frm_DetailProducts().ShowDialog();
         }
 
         private void txt_Search_OnValueChanged(object sender, EventArgs e)
