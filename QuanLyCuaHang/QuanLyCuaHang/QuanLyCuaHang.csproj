@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BS layer\BS_Customer.cs" />
     <Compile Include="BS layer\BS_Employee.cs" />
     <Compile Include="BS layer\BS_Products.cs" />
     <Compile Include="DB layer\DBMain.cs" />

@@ -261,6 +261,14 @@ namespace QuanLyCuaHang.BS_layer
                 return true;
             return false;
         }
+        // search product detail
+        public DataTable searchProductDetail(string _search)
+        {
+            string sqlString = "select * from DETAIL where IDDetail like '"+_search+"%' or ManHinh like '"+_search+"%' " +
+                "or CameraTruoc like '"+_search+"%' or CameraSau like '"+_search+"%'or OS like '"+_search+"%' or Ram like '"+_search+"%' " +
+                "or Rom like '"+_search+"%' or DungLuongPin like '"+_search+"%' or Chip like '"+_search+"%'";
+            return dBMain.ExecuteQueryDataSet(sqlString,CommandType.Text);
+        }
         #endregion
     }
 }

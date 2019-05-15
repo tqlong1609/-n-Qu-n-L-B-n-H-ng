@@ -46,9 +46,12 @@ namespace QuanLyCuaHang
             bS_Products = new BS_Products();
             pbx_Avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             loadDataBox();
-            cbx_IdBlock.selectedIndex = 0;
-            cbx_IdCategory.selectedIndex = 0;
-            cbx_IdDetail.selectedIndex = 0;
+            if (cbx_IdBlock.Items.Count > 0)
+                cbx_IdBlock.selectedIndex = 0;
+            if (cbx_IdCategory.Items.Count > 0)
+                cbx_IdCategory.selectedIndex = 0;
+            if(cbx_IdDetail.Items.Count > 0)
+                cbx_IdDetail.selectedIndex = 0;
         }
         // load data into combobox
         private void loadDataBox()

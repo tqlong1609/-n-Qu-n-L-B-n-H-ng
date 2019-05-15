@@ -88,5 +88,17 @@ namespace QuanLyCuaHang
                 new frm_AddDetailProducts(dataGid_Detail.Rows[index].Cells[0].Value.ToString()).ShowDialog();
             }
         }
+
+        private void txt_Search_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Search.Text != "")
+            {
+                dataGid_Detail.DataSource = bS_Product.searchProductDetail(txt_Search.Text.Trim());
+            }
+            else
+            {
+                loadData();
+            }
+        }
     }
 }
