@@ -25,8 +25,14 @@ namespace QuanLyCuaHang.BS_layer
         public string loadId()
         {
             DataTable dataTable = dBMain.ExecuteQueryDataSet("select IDKhachHang from KHACHHANG", CommandType.Text);
-            int count = dataTable.Rows.Count;
-            return "KH" + (count + 1);
+            int num = 0;
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                if (!dataRow["IDKhachHang"].ToString().Contains(num.ToString()))
+                    return "KH" + num;
+                num++;
+            }
+            return "KH" + num;
         }
         // add customer
         public bool addCustomer(string id, string name, int phone, string address, bool isFemale,ref string error)
@@ -36,6 +42,14 @@ namespace QuanLyCuaHang.BS_layer
                 string sqlString = "insert into KHACHHANG (IDKhachHang, Name, phoneNumber, Address, gender) " +
                     "values ('" + id + "',N'" + name + "','" + phone + "',N'" + address + "',"+_isFemale+")";
             if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error)) return true;
+            return false;
+        }
+        // delete customer
+        public bool deleteCustomer(string id, ref string error)
+        {
+            string sqlString = "delete from KHACHHANG where IDKhachHang = '"+id+"'";
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                return true;
             return false;
         }
     }

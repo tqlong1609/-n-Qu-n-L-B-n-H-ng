@@ -16,6 +16,7 @@ namespace QuanLyCuaHang
         private string path;
         private BS_Products bS_Products;
         private string id;
+        public static bool isUpdate = false;
 
         private mode mMode;
 
@@ -73,7 +74,19 @@ namespace QuanLyCuaHang
             {
                 cbx_IdDetail.AddItem(dataRow["IDDetail"].ToString().Trim());
             }
-            txt_Id.Text = "SP" + (tableProduct.Rows.Count + 1);
+            txt_Id.Text = loadIdProduct(tableProduct);
+        }
+        // load id product
+        private string loadIdProduct(DataTable dataTable)
+        {
+            int num = 0;
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                if (!dataRow["IDSanPham"].ToString().Contains(num.ToString()))
+                    return "SP" + num;
+                num++;
+            }
+            return "SP" + num;
         }
         // load data repaid
         private void loadData()
@@ -150,6 +163,7 @@ namespace QuanLyCuaHang
                     {
                         bS_Products.addProduct(txt_Id.Text, cbx_IdCategory.selectedValue, txt_Name.Text, int.Parse(txt_Price.Text),
                             cbx_IdBlock.selectedValue, cbx_IdDetail.selectedValue, path, ref error);
+                        isUpdate = true;
                         this.Close();
                     }
                     catch (Exception) { MessageBox.Show(error); }

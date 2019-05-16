@@ -168,5 +168,12 @@ namespace QuanLyCuaHang
                 checkLoadProduct();
             }
         }
+
+        private void dataGid_Device_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (frm_AddProduct.isUpdate)
+                checkLoadProduct();
+            frm_AddProduct.isUpdate = false;
+        }
     }
 }

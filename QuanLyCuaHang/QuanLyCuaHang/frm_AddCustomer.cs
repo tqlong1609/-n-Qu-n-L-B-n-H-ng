@@ -18,6 +18,7 @@ namespace QuanLyCuaHang
         public static bool isUpdate = false;
 
         private enum Mode { add, repaid};
+
         // constructor add
         public frm_AddCustomer()
         {
