@@ -76,7 +76,7 @@ namespace QuanLyCuaHang
         {
             if (txt_Search.Text != "")
             {
-                dataGid_Customer.DataSource = bS_Customer.searchCustomer(txt_Search.Text.Trim());
+                dataGid_Customer.DataSource = bS_Customer.searchCustomer(txt_Search.Text.Trim().ToLower());
             }
             else
             {
