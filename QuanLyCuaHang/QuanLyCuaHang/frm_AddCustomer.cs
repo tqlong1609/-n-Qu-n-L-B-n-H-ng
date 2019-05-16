@@ -36,7 +36,31 @@ namespace QuanLyCuaHang
             bS_Customer = new BS_Customer();
             ckbx_Male.Checked = true;
             ckBx_Female.Checked = false;
+            loadDataFromId(id);
             mode = Mode.repaid;
+            btn_Find.Text = "Repaid";
+        }
+        // load data from id
+        private void loadDataFromId(string id)
+        {
+            DataTable dataTable = bS_Customer.loadDataFromId(id);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                txt_Id.Text = id;
+                txt_Name.Text = dataRow["Name"].ToString();
+                txt_Phone.Text = dataRow["phoneNumber"].ToString();
+                txt_Address.Text = dataRow["Address"].ToString();
+                if (dataRow["gender"].ToString().Trim().Equals("True"))
+                {
+                    ckBx_Female.Checked = true;
+                    ckbx_Male.Checked = false;
+                }
+                else
+                {
+                    ckbx_Male.Checked = true;
+                    ckBx_Female.Checked = false;
+                }
+            }
         }
         // load id customer
         private void loadId()
@@ -70,6 +94,23 @@ namespace QuanLyCuaHang
             }
             else // repaid
             {
+                if (!isEmpty())
+                {
+                    int numPhone;
+                    if (int.TryParse(txt_Phone.Text, out numPhone))
+                    {
+                        string error = "";
+                        if (bS_Customer.repaidCustomer(txt_Id.Text, txt_Name.Text, numPhone, txt_Address.Text, isFemale(), ref error))
+                        {
+                            MessageBox.Show("Success", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            isUpdate = true;
+                            this.Close();
+                        }
+                        else MessageBox.Show(error);
+                    }
+                    else { MessageBox.Show("Phone number is not string", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); txt_Phone.Text = ""; txt_Phone.Focus(); }
+                }
+                else { MessageBox.Show("Values does not empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
         }
 

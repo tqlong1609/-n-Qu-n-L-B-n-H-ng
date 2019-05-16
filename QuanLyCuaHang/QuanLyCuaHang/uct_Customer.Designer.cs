@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uct_Customer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Find = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Export = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Repair = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Delete = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Add = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_Search = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGid_Customer = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.button2 = new System.Windows.Forms.Button();
@@ -84,7 +84,7 @@
             this.btn_Export.Location = new System.Drawing.Point(276, 3);
             this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Export.Name = "btn_Export";
-            this.btn_Export.Size = new System.Drawing.Size(57, 55);
+            this.btn_Export.Size = new System.Drawing.Size(57, 65);
             this.btn_Export.TabIndex = 37;
             // 
             // btn_Repair
@@ -104,7 +104,7 @@
             this.btn_Repair.Location = new System.Drawing.Point(213, 3);
             this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
-            this.btn_Repair.Size = new System.Drawing.Size(57, 55);
+            this.btn_Repair.Size = new System.Drawing.Size(57, 65);
             this.btn_Repair.TabIndex = 36;
             this.btn_Repair.Click += new System.EventHandler(this.btn_Repair_Click);
             // 
@@ -125,7 +125,7 @@
             this.btn_Delete.Location = new System.Drawing.Point(150, 3);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(57, 55);
+            this.btn_Delete.Size = new System.Drawing.Size(63, 65);
             this.btn_Delete.TabIndex = 35;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
@@ -146,29 +146,30 @@
             this.btn_Add.Location = new System.Drawing.Point(88, 3);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(56, 55);
+            this.btn_Add.Size = new System.Drawing.Size(56, 65);
             this.btn_Add.TabIndex = 34;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // bunifuMetroTextbox3
+            // txt_Search
             // 
-            this.bunifuMetroTextbox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
-            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.bunifuMetroTextbox3.BorderThickness = 3;
-            this.bunifuMetroTextbox3.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(402, 13);
-            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox3.MaxLength = 32767;
-            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
-            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(227, 36);
-            this.bunifuMetroTextbox3.TabIndex = 82;
-            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Search.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            this.txt_Search.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
+            this.txt_Search.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            this.txt_Search.BorderThickness = 3;
+            this.txt_Search.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.ForeColor = System.Drawing.Color.White;
+            this.txt_Search.isPassword = false;
+            this.txt_Search.Location = new System.Drawing.Point(402, 13);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Search.MaxLength = 32767;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(227, 36);
+            this.txt_Search.TabIndex = 82;
+            this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Search.OnValueChanged += new System.EventHandler(this.txt_Search_OnValueChanged);
             // 
             // button1
             // 
@@ -189,31 +190,31 @@
             this.dataGid_Customer.AllowUserToAddRows = false;
             this.dataGid_Customer.AllowUserToResizeColumns = false;
             this.dataGid_Customer.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGid_Customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGid_Customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGid_Customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGid_Customer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
             this.dataGid_Customer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGid_Customer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGid_Customer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGid_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGid_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGid_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGid_Customer.ColumnHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGid_Customer.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGid_Customer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGid_Customer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGid_Customer.DoubleBuffered = true;
             this.dataGid_Customer.EnableHeadersVisualStyles = false;
@@ -304,7 +305,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGid_Customer);
-            this.Controls.Add(this.bunifuMetroTextbox3);
+            this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.btn_Find);
             this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Repair);
@@ -325,7 +326,7 @@
         private Bunifu.Framework.UI.BunifuTileButton btn_Repair;
         private Bunifu.Framework.UI.BunifuTileButton btn_Delete;
         private Bunifu.Framework.UI.BunifuTileButton btn_Add;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_Search;
         private System.Windows.Forms.Button button1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGid_Customer;
         private System.Windows.Forms.Button button2;

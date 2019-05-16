@@ -213,7 +213,7 @@
             this.dataGrid_Employee.GridColor = System.Drawing.Color.Black;
             this.dataGrid_Employee.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dataGrid_Employee.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dataGrid_Employee.Location = new System.Drawing.Point(0, 152);
+            this.dataGrid_Employee.Location = new System.Drawing.Point(0, 164);
             this.dataGrid_Employee.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid_Employee.MultiSelect = false;
             this.dataGrid_Employee.Name = "dataGrid_Employee";
@@ -225,7 +225,7 @@
             this.dataGrid_Employee.RowTemplate.Height = 30;
             this.dataGrid_Employee.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_Employee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Employee.Size = new System.Drawing.Size(691, 425);
+            this.dataGrid_Employee.Size = new System.Drawing.Size(691, 413);
             this.dataGrid_Employee.TabIndex = 19;
             this.dataGrid_Employee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Employee_CellClick);
             // 
@@ -243,10 +243,10 @@
             this.btn_Add.ImageZoom = 30;
             this.btn_Add.LabelPosition = 29;
             this.btn_Add.LabelText = "Add";
-            this.btn_Add.Location = new System.Drawing.Point(86, 63);
+            this.btn_Add.Location = new System.Drawing.Point(87, 63);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(56, 55);
+            this.btn_Add.Size = new System.Drawing.Size(56, 71);
             this.btn_Add.TabIndex = 20;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
@@ -264,10 +264,10 @@
             this.btn_Delete.ImageZoom = 30;
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
-            this.btn_Delete.Location = new System.Drawing.Point(147, 63);
+            this.btn_Delete.Location = new System.Drawing.Point(148, 63);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(57, 55);
+            this.btn_Delete.Size = new System.Drawing.Size(57, 71);
             this.btn_Delete.TabIndex = 21;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
@@ -285,10 +285,10 @@
             this.btn_Repair.ImageZoom = 30;
             this.btn_Repair.LabelPosition = 29;
             this.btn_Repair.LabelText = "Repair";
-            this.btn_Repair.Location = new System.Drawing.Point(210, 63);
+            this.btn_Repair.Location = new System.Drawing.Point(211, 63);
             this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
-            this.btn_Repair.Size = new System.Drawing.Size(57, 55);
+            this.btn_Repair.Size = new System.Drawing.Size(57, 71);
             this.btn_Repair.TabIndex = 22;
             this.btn_Repair.Click += new System.EventHandler(this.btn_Repair_Click);
             // 
@@ -306,10 +306,10 @@
             this.btn_Export.ImageZoom = 30;
             this.btn_Export.LabelPosition = 29;
             this.btn_Export.LabelText = "Export";
-            this.btn_Export.Location = new System.Drawing.Point(273, 63);
+            this.btn_Export.Location = new System.Drawing.Point(274, 63);
             this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Export.Name = "btn_Export";
-            this.btn_Export.Size = new System.Drawing.Size(57, 55);
+            this.btn_Export.Size = new System.Drawing.Size(57, 71);
             this.btn_Export.TabIndex = 23;
             // 
             // txt_search
@@ -340,7 +340,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(0, 129);
+            this.button1.Location = new System.Drawing.Point(0, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 23);
             this.button1.TabIndex = 83;
@@ -354,7 +354,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(115, 129);
+            this.button2.Location = new System.Drawing.Point(115, 142);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 23);
             this.button2.TabIndex = 84;
@@ -368,7 +368,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(230, 129);
+            this.button3.Location = new System.Drawing.Point(230, 142);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 23);
             this.button3.TabIndex = 85;
@@ -382,7 +382,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(575, 129);
+            this.button4.Location = new System.Drawing.Point(575, 142);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 23);
             this.button4.TabIndex = 88;
@@ -396,7 +396,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(460, 129);
+            this.button5.Location = new System.Drawing.Point(460, 142);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(116, 23);
             this.button5.TabIndex = 87;
@@ -410,7 +410,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(345, 129);
+            this.button6.Location = new System.Drawing.Point(345, 142);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(116, 23);
             this.button6.TabIndex = 86;
@@ -431,10 +431,10 @@
             this.btn_Find.ImageZoom = 30;
             this.btn_Find.LabelPosition = 29;
             this.btn_Find.LabelText = "Find";
-            this.btn_Find.Location = new System.Drawing.Point(336, 63);
+            this.btn_Find.Location = new System.Drawing.Point(337, 63);
             this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Find.Name = "btn_Find";
-            this.btn_Find.Size = new System.Drawing.Size(57, 55);
+            this.btn_Find.Size = new System.Drawing.Size(57, 71);
             this.btn_Find.TabIndex = 24;
             // 
             // uct_Employee

@@ -71,5 +71,17 @@ namespace QuanLyCuaHang
                 new frm_AddCustomer(dataGid_Customer.Rows[index].Cells[0].Value.ToString()).ShowDialog();
             }
         }
+
+        private void txt_Search_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Search.Text != "")
+            {
+                dataGid_Customer.DataSource = bS_Customer.searchCustomer(txt_Search.Text.Trim());
+            }
+            else
+            {
+                loadData();
+            }
+        }
     }
 }

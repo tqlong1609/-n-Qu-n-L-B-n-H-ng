@@ -52,5 +52,30 @@ namespace QuanLyCuaHang.BS_layer
                 return true;
             return false;
         }
+        // repaid customer
+        public bool repaidCustomer(string id, string name, int phone, string address, bool gender,ref string error)
+        {
+            byte _gender = 0;
+            if (gender) _gender = 1;
+            string sqlString = "update KHACHHANG set name = N'"+name+"', phoneNumber = '"+phone+"'," +
+                " Address = N'"+address+"', gender = "+_gender+" where IDKhachHang = '"+id+"'";
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                return true;
+            return false;
+        }
+        // load data from id
+        public DataTable loadDataFromId(string id)
+        {
+            string sqlString = "select * from KHACHHANG where IDKhachHang = '" + id + "'";
+            return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
+        // Search customer
+        public DataTable searchCustomer(string _search)
+        {
+            string sqlString = "select * from KHACHHANG where IDKhachHang like '"+_search+"%' or Name like N'"+_search+"%' " +
+                "or phoneNumber like '"+_search+"%' or Address like N'"+_search+"%'";
+            return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
+
     }
 }

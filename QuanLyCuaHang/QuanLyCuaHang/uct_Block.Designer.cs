@@ -56,6 +56,7 @@
             this.btn_Find.LabelPosition = 29;
             this.btn_Find.LabelText = "Find";
             this.btn_Find.Location = new System.Drawing.Point(339, 3);
+            this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.Size = new System.Drawing.Size(57, 55);
             this.btn_Find.TabIndex = 44;
@@ -75,6 +76,7 @@
             this.btn_Export.LabelPosition = 29;
             this.btn_Export.LabelText = "Export";
             this.btn_Export.Location = new System.Drawing.Point(276, 3);
+            this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(57, 55);
             this.btn_Export.TabIndex = 43;
@@ -94,6 +96,7 @@
             this.btn_Repair.LabelPosition = 29;
             this.btn_Repair.LabelText = "Repair";
             this.btn_Repair.Location = new System.Drawing.Point(213, 3);
+            this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
             this.btn_Repair.Size = new System.Drawing.Size(57, 55);
             this.btn_Repair.TabIndex = 42;
@@ -113,6 +116,7 @@
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
             this.btn_Delete.Location = new System.Drawing.Point(150, 3);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(57, 55);
             this.btn_Delete.TabIndex = 41;
@@ -132,6 +136,7 @@
             this.btn_Add.LabelPosition = 29;
             this.btn_Add.LabelText = "Add";
             this.btn_Add.Location = new System.Drawing.Point(88, 3);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(56, 55);
             this.btn_Add.TabIndex = 40;
@@ -159,7 +164,7 @@
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(0, 64);
-            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowTemplate.Height = 24;
@@ -179,6 +184,7 @@
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox3.isPassword = false;
             this.bunifuMetroTextbox3.Location = new System.Drawing.Point(402, 14);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.MaxLength = 32767;
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
             this.bunifuMetroTextbox3.Size = new System.Drawing.Size(227, 36);
@@ -197,7 +203,7 @@
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.bunifuCustomDataGrid1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uct_Block";
             this.Size = new System.Drawing.Size(691, 577);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
