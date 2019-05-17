@@ -62,7 +62,7 @@
             this.btn_Find.ImageZoom = 30;
             this.btn_Find.LabelPosition = 29;
             this.btn_Find.LabelText = "Find";
-            this.btn_Find.Location = new System.Drawing.Point(339, 3);
+            this.btn_Find.Location = new System.Drawing.Point(359, 3);
             this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.Size = new System.Drawing.Size(57, 55);
@@ -82,7 +82,7 @@
             this.btn_Export.ImageZoom = 30;
             this.btn_Export.LabelPosition = 29;
             this.btn_Export.LabelText = "Export";
-            this.btn_Export.Location = new System.Drawing.Point(276, 3);
+            this.btn_Export.Location = new System.Drawing.Point(296, 3);
             this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(57, 65);
@@ -102,7 +102,7 @@
             this.btn_Repair.ImageZoom = 30;
             this.btn_Repair.LabelPosition = 29;
             this.btn_Repair.LabelText = "Repair";
-            this.btn_Repair.Location = new System.Drawing.Point(213, 3);
+            this.btn_Repair.Location = new System.Drawing.Point(233, 3);
             this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
             this.btn_Repair.Size = new System.Drawing.Size(57, 65);
@@ -123,7 +123,7 @@
             this.btn_Delete.ImageZoom = 30;
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
-            this.btn_Delete.Location = new System.Drawing.Point(150, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(170, 3);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(63, 65);
@@ -144,7 +144,7 @@
             this.btn_Add.ImageZoom = 30;
             this.btn_Add.LabelPosition = 29;
             this.btn_Add.LabelText = "Add";
-            this.btn_Add.Location = new System.Drawing.Point(88, 3);
+            this.btn_Add.Location = new System.Drawing.Point(108, 3);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(56, 65);
@@ -163,7 +163,7 @@
             this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search.ForeColor = System.Drawing.Color.White;
             this.txt_Search.isPassword = false;
-            this.txt_Search.Location = new System.Drawing.Point(402, 13);
+            this.txt_Search.Location = new System.Drawing.Point(422, 13);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Search.MaxLength = 32767;
             this.txt_Search.Name = "txt_Search";
@@ -309,10 +309,10 @@
             this.btn_GiftCode.ImageZoom = 30;
             this.btn_GiftCode.LabelPosition = 29;
             this.btn_GiftCode.LabelText = "Gift Code";
-            this.btn_GiftCode.Location = new System.Drawing.Point(5, 5);
+            this.btn_GiftCode.Location = new System.Drawing.Point(5, 3);
             this.btn_GiftCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_GiftCode.Name = "btn_GiftCode";
-            this.btn_GiftCode.Size = new System.Drawing.Size(90, 63);
+            this.btn_GiftCode.Size = new System.Drawing.Size(93, 63);
             this.btn_GiftCode.TabIndex = 90;
             this.btn_GiftCode.Click += new System.EventHandler(this.btn_GiftCode_Click);
             // 

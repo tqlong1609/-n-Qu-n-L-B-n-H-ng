@@ -13,6 +13,7 @@ namespace QuanLyCuaHang
 
     public partial class frm_MainEmployee : Form
     {
+        private string idEmployee;
         int origin_menu_width;
         int slide_menu_width;
         public frm_MainEmployee()

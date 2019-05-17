@@ -84,5 +84,36 @@ namespace QuanLyCuaHang
                 pbx_Avatar.Image = product.loadImage(dataGid_Device.Rows[index].Cells[0].Value.ToString());
             }
         }
+
+        private void txt_Search_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Search.Text != "")
+            {
+                dataGid_Device.DataSource = product.searchProducts(txt_Search.Text.Trim());
+            }
+            else
+            {
+                checkLoadProduct();
+            }
+        }
+        // check load product
+        private void checkLoadProduct()
+        {
+            switch (typeDevice)
+            {
+                case TypeDevice.Laptop:
+                    loadDataLaptop();
+                    break;
+                case TypeDevice.ExtraDevice:
+                    loadExtraDevice();
+                    break;
+                case TypeDevice.SmartPhone:
+                    loadSmartPhone();
+                    break;
+                case TypeDevice.All:
+                    loadDataAll();
+                    break;
+            }
+        }
     }
 }

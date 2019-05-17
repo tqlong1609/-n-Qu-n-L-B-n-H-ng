@@ -36,7 +36,7 @@
             this.btn_ExtraDevice = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_SmartPhone = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_All = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_Search = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btn_Find = new Bunifu.Framework.UI.BunifuTileButton();
             this.dataGid_Device = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,7 +98,7 @@
             this.panel1.Controls.Add(this.btn_All);
             this.panel1.Controls.Add(this.btn_Laptop);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(691, 57);
             this.panel1.TabIndex = 84;
@@ -214,24 +214,26 @@
             this.btn_All.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_All.Click += new System.EventHandler(this.btn_All_Click);
             // 
-            // bunifuMetroTextbox3
+            // txt_Search
             // 
-            this.bunifuMetroTextbox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
-            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.bunifuMetroTextbox3.BorderThickness = 3;
-            this.bunifuMetroTextbox3.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(393, 90);
-            this.bunifuMetroTextbox3.MaxLength = 32767;
-            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
-            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(227, 36);
-            this.bunifuMetroTextbox3.TabIndex = 91;
-            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Search.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            this.txt_Search.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
+            this.txt_Search.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            this.txt_Search.BorderThickness = 3;
+            this.txt_Search.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.ForeColor = System.Drawing.Color.White;
+            this.txt_Search.isPassword = false;
+            this.txt_Search.Location = new System.Drawing.Point(292, 109);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Search.MaxLength = 32767;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(227, 36);
+            this.txt_Search.TabIndex = 91;
+            this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Search.OnValueChanged += new System.EventHandler(this.txt_Search_OnValueChanged);
             // 
             // btn_Find
             // 
@@ -247,7 +249,8 @@
             this.btn_Find.ImageZoom = 30;
             this.btn_Find.LabelPosition = 29;
             this.btn_Find.LabelText = "Find";
-            this.btn_Find.Location = new System.Drawing.Point(330, 80);
+            this.btn_Find.Location = new System.Drawing.Point(229, 99);
+            this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.Size = new System.Drawing.Size(57, 55);
             this.btn_Find.TabIndex = 90;
@@ -361,7 +364,7 @@
             this.pbx_Avatar.Location = new System.Drawing.Point(12, 62);
             this.pbx_Avatar.Margin = new System.Windows.Forms.Padding(2);
             this.pbx_Avatar.Name = "pbx_Avatar";
-            this.pbx_Avatar.Size = new System.Drawing.Size(160, 108);
+            this.pbx_Avatar.Size = new System.Drawing.Size(124, 108);
             this.pbx_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_Avatar.TabIndex = 93;
             this.pbx_Avatar.TabStop = false;
@@ -374,9 +377,9 @@
             this.Controls.Add(this.pbx_Avatar);
             this.Controls.Add(this.dataGid_Device);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bunifuMetroTextbox3);
+            this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.btn_Find);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uct_ProductView";
             this.Size = new System.Drawing.Size(691, 577);
             this.panel1.ResumeLayout(false);
@@ -393,7 +396,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_ExtraDevice;
         private Bunifu.Framework.UI.BunifuFlatButton btn_SmartPhone;
         private Bunifu.Framework.UI.BunifuFlatButton btn_All;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_Search;
         private Bunifu.Framework.UI.BunifuTileButton btn_Find;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGid_Device;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDSanPham;
