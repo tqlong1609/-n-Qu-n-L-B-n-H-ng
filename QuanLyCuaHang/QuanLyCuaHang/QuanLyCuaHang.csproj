@@ -62,6 +62,7 @@
     <Compile Include="BS layer\BS_Block.cs" />
     <Compile Include="BS layer\BS_Customer.cs" />
     <Compile Include="BS layer\BS_Employee.cs" />
+    <Compile Include="BS layer\BS_Gift.cs" />
     <Compile Include="BS layer\BS_Products.cs" />
     <Compile Include="DB layer\DBMain.cs" />
     <Compile Include="frm_AddBlock.cs">
@@ -99,6 +100,12 @@
     </Compile>
     <Compile Include="frm_DetailProducts.Designer.cs">
       <DependentUpon>frm_DetailProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GiftCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GiftCode.Designer.cs">
+      <DependentUpon>frm_GiftCode.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_MainAdmin.cs">
       <SubType>Form</SubType>
@@ -215,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DetailProducts.resx">
       <DependentUpon>frm_DetailProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GiftCode.resx">
+      <DependentUpon>frm_GiftCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_MainAdmin.resx">
       <DependentUpon>frm_MainAdmin.cs</DependentUpon>

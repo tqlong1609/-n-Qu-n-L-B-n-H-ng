@@ -79,7 +79,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pnl_Menu, BunifuAnimatorNS.DecorationType.None);
             this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_Menu.Location = new System.Drawing.Point(0, 46);
-            this.pnl_Menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Menu.Name = "pnl_Menu";
             this.pnl_Menu.Size = new System.Drawing.Size(209, 577);
             this.pnl_Menu.TabIndex = 0;
@@ -200,7 +200,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pbx_LogoSlide, BunifuAnimatorNS.DecorationType.None);
             this.pbx_LogoSlide.Image = ((System.Drawing.Image)(resources.GetObject("pbx_LogoSlide.Image")));
             this.pbx_LogoSlide.Location = new System.Drawing.Point(-5, 47);
-            this.pbx_LogoSlide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbx_LogoSlide.Margin = new System.Windows.Forms.Padding(2);
             this.pbx_LogoSlide.Name = "pbx_LogoSlide";
             this.pbx_LogoSlide.Size = new System.Drawing.Size(58, 76);
             this.pbx_LogoSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -437,7 +437,7 @@
             this.btn_Menu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Menu.Image")));
             this.btn_Menu.ImageActive = null;
             this.btn_Menu.Location = new System.Drawing.Point(175, 17);
-            this.btn_Menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Menu.Name = "btn_Menu";
             this.btn_Menu.Size = new System.Drawing.Size(22, 24);
             this.btn_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -451,7 +451,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pbx_Logo, BunifuAnimatorNS.DecorationType.None);
             this.pbx_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pbx_Logo.Image")));
             this.pbx_Logo.Location = new System.Drawing.Point(-26, 17);
-            this.pbx_Logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbx_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.pbx_Logo.Name = "pbx_Logo";
             this.pbx_Logo.Size = new System.Drawing.Size(193, 93);
             this.pbx_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -468,7 +468,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pnl_Bar, BunifuAnimatorNS.DecorationType.None);
             this.pnl_Bar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Bar.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Bar.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Bar.Name = "pnl_Bar";
             this.pnl_Bar.Size = new System.Drawing.Size(900, 46);
             this.pnl_Bar.TabIndex = 1;
@@ -482,7 +482,7 @@
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
             this.btn_Exit.ImageActive = null;
             this.btn_Exit.Location = new System.Drawing.Point(870, 10);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(19, 20);
             this.btn_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -497,7 +497,7 @@
             this.btn_Minisize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minisize.Image")));
             this.btn_Minisize.ImageActive = null;
             this.btn_Minisize.Location = new System.Drawing.Point(843, 10);
-            this.btn_Minisize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Minisize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Minisize.Name = "btn_Minisize";
             this.btn_Minisize.Size = new System.Drawing.Size(22, 24);
             this.btn_Minisize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -527,7 +527,7 @@
             this.lbl_IconPosition.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lbl_IconPosition.BackgroundImage")));
             this.bt_MenuAnimation.SetDecoration(this.lbl_IconPosition, BunifuAnimatorNS.DecorationType.None);
             this.lbl_IconPosition.Location = new System.Drawing.Point(9, 10);
-            this.lbl_IconPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbl_IconPosition.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_IconPosition.Name = "lbl_IconPosition";
             this.lbl_IconPosition.Size = new System.Drawing.Size(24, 26);
             this.lbl_IconPosition.TabIndex = 0;
@@ -562,7 +562,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pnl_Main, BunifuAnimatorNS.DecorationType.None);
             this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Main.Location = new System.Drawing.Point(209, 46);
-            this.pnl_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Main.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Main.Name = "pnl_Main";
             this.pnl_Main.Size = new System.Drawing.Size(691, 577);
             this.pnl_Main.TabIndex = 2;
@@ -578,7 +578,7 @@
             this.Controls.Add(this.pnl_Bar);
             this.bt_MenuAnimation.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnl_Menu.ResumeLayout(false);

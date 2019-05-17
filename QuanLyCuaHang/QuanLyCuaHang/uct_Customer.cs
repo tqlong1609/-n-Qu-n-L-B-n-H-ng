@@ -83,5 +83,10 @@ namespace QuanLyCuaHang
                 loadData();
             }
         }
+
+        private void btn_GiftCode_Click(object sender, EventArgs e)
+        {
+            new frm_GiftCode().ShowDialog();
+        }
     }
 }

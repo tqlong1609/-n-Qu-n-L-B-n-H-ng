@@ -44,6 +44,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.btn_GiftCode = new Bunifu.Framework.UI.BunifuTileButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Customer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -294,11 +295,33 @@
             this.button5.Text = "Female";
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // btn_GiftCode
+            // 
+            this.btn_GiftCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_GiftCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_GiftCode.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_GiftCode.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
+            this.btn_GiftCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_GiftCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GiftCode.ForeColor = System.Drawing.Color.White;
+            this.btn_GiftCode.Image = ((System.Drawing.Image)(resources.GetObject("btn_GiftCode.Image")));
+            this.btn_GiftCode.ImagePosition = 14;
+            this.btn_GiftCode.ImageZoom = 30;
+            this.btn_GiftCode.LabelPosition = 29;
+            this.btn_GiftCode.LabelText = "Gift Code";
+            this.btn_GiftCode.Location = new System.Drawing.Point(5, 5);
+            this.btn_GiftCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_GiftCode.Name = "btn_GiftCode";
+            this.btn_GiftCode.Size = new System.Drawing.Size(90, 63);
+            this.btn_GiftCode.TabIndex = 90;
+            this.btn_GiftCode.Click += new System.EventHandler(this.btn_GiftCode_Click);
+            // 
             // uct_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.Controls.Add(this.btn_GiftCode);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -333,5 +356,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private Bunifu.Framework.UI.BunifuTileButton btn_GiftCode;
     }
 }
