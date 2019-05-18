@@ -131,5 +131,10 @@ namespace QuanLyCuaHang
                 checkLoadEmployee();
             }
         }
+
+        private void btn_Notification_Click(object sender, EventArgs e)
+        {
+            new frm_SendNotification().ShowDialog();
+        }
     }
 }

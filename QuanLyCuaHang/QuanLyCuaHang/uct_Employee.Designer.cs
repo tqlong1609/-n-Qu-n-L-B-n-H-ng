@@ -49,6 +49,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btn_Find = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_Notification = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Employee)).BeginInit();
             this.SuspendLayout();
@@ -243,7 +244,7 @@
             this.btn_Add.ImageZoom = 30;
             this.btn_Add.LabelPosition = 29;
             this.btn_Add.LabelText = "Add";
-            this.btn_Add.Location = new System.Drawing.Point(87, 63);
+            this.btn_Add.Location = new System.Drawing.Point(137, 63);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(56, 71);
@@ -264,7 +265,7 @@
             this.btn_Delete.ImageZoom = 30;
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
-            this.btn_Delete.Location = new System.Drawing.Point(148, 63);
+            this.btn_Delete.Location = new System.Drawing.Point(198, 63);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(57, 71);
@@ -285,7 +286,7 @@
             this.btn_Repair.ImageZoom = 30;
             this.btn_Repair.LabelPosition = 29;
             this.btn_Repair.LabelText = "Repair";
-            this.btn_Repair.Location = new System.Drawing.Point(211, 63);
+            this.btn_Repair.Location = new System.Drawing.Point(261, 63);
             this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
             this.btn_Repair.Size = new System.Drawing.Size(57, 71);
@@ -306,7 +307,7 @@
             this.btn_Export.ImageZoom = 30;
             this.btn_Export.LabelPosition = 29;
             this.btn_Export.LabelText = "Export";
-            this.btn_Export.Location = new System.Drawing.Point(274, 63);
+            this.btn_Export.Location = new System.Drawing.Point(324, 63);
             this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(57, 71);
@@ -324,7 +325,7 @@
             this.txt_search.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_search.ForeColor = System.Drawing.Color.White;
             this.txt_search.isPassword = false;
-            this.txt_search.Location = new System.Drawing.Point(399, 73);
+            this.txt_search.Location = new System.Drawing.Point(449, 73);
             this.txt_search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_search.MaxLength = 32767;
             this.txt_search.Name = "txt_search";
@@ -431,17 +432,39 @@
             this.btn_Find.ImageZoom = 30;
             this.btn_Find.LabelPosition = 29;
             this.btn_Find.LabelText = "Find";
-            this.btn_Find.Location = new System.Drawing.Point(337, 63);
+            this.btn_Find.Location = new System.Drawing.Point(387, 63);
             this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.Size = new System.Drawing.Size(57, 71);
             this.btn_Find.TabIndex = 24;
+            // 
+            // btn_Notification
+            // 
+            this.btn_Notification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Notification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_Notification.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_Notification.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
+            this.btn_Notification.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Notification.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Notification.ForeColor = System.Drawing.Color.White;
+            this.btn_Notification.Image = ((System.Drawing.Image)(resources.GetObject("btn_Notification.Image")));
+            this.btn_Notification.ImagePosition = 14;
+            this.btn_Notification.ImageZoom = 30;
+            this.btn_Notification.LabelPosition = 29;
+            this.btn_Notification.LabelText = "Notification";
+            this.btn_Notification.Location = new System.Drawing.Point(16, 61);
+            this.btn_Notification.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Notification.Name = "btn_Notification";
+            this.btn_Notification.Size = new System.Drawing.Size(111, 71);
+            this.btn_Notification.TabIndex = 89;
+            this.btn_Notification.Click += new System.EventHandler(this.btn_Notification_Click);
             // 
             // uct_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.Controls.Add(this.btn_Notification);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -484,5 +507,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private Bunifu.Framework.UI.BunifuTileButton btn_Find;
+        private Bunifu.Framework.UI.BunifuTileButton btn_Notification;
     }
 }

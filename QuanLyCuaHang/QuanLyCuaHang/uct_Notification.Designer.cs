@@ -30,18 +30,25 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btn_Find = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            this.dataGid_Notification = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.tbn_ID = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGid_Notification)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuCustomDataGrid1
+            // dataGid_Notification
             // 
+            this.dataGid_Notification.AllowUserToAddRows = false;
+            this.dataGid_Notification.AllowUserToDeleteRows = false;
+            this.dataGid_Notification.AllowUserToResizeColumns = false;
+            this.dataGid_Notification.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGid_Notification.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGid_Notification.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGid_Notification.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.dataGid_Notification.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGid_Notification.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGid_Notification.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -49,73 +56,78 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.RowTemplate.Height = 24;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(921, 631);
-            this.bunifuCustomDataGrid1.TabIndex = 34;
+            this.dataGid_Notification.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGid_Notification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGid_Notification.ColumnHeadersVisible = false;
+            this.dataGid_Notification.DoubleBuffered = true;
+            this.dataGid_Notification.EnableHeadersVisualStyles = false;
+            this.dataGid_Notification.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGid_Notification.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dataGid_Notification.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dataGid_Notification.Location = new System.Drawing.Point(2, 31);
+            this.dataGid_Notification.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGid_Notification.MultiSelect = false;
+            this.dataGid_Notification.Name = "dataGid_Notification";
+            this.dataGid_Notification.ReadOnly = true;
+            this.dataGid_Notification.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGid_Notification.RowHeadersVisible = false;
+            this.dataGid_Notification.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.dataGid_Notification.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGid_Notification.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
+            this.dataGid_Notification.RowTemplate.Height = 24;
+            this.dataGid_Notification.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGid_Notification.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGid_Notification.Size = new System.Drawing.Size(687, 544);
+            this.dataGid_Notification.TabIndex = 89;
+            this.dataGid_Notification.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGid_Notification_CellDoubleClick);
             // 
-            // btn_Find
+            // tbn_ID
             // 
-            this.btn_Find.Active = false;
-            this.btn_Find.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(48)))), ((int)(((byte)(69)))));
-            this.btn_Find.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.btn_Find.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Find.BorderRadius = 0;
-            this.btn_Find.ButtonText = "Check my Notification";
-            this.btn_Find.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Find.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Find.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Find.Iconimage = null;
-            this.btn_Find.Iconimage_right = null;
-            this.btn_Find.Iconimage_right_Selected = null;
-            this.btn_Find.Iconimage_Selected = null;
-            this.btn_Find.IconMarginLeft = 0;
-            this.btn_Find.IconMarginRight = 0;
-            this.btn_Find.IconRightVisible = true;
-            this.btn_Find.IconRightZoom = 0D;
-            this.btn_Find.IconVisible = true;
-            this.btn_Find.IconZoom = 40D;
-            this.btn_Find.IsTab = false;
-            this.btn_Find.Location = new System.Drawing.Point(292, 638);
-            this.btn_Find.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Find.Name = "btn_Find";
-            this.btn_Find.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.btn_Find.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(48)))), ((int)(((byte)(69)))));
-            this.btn_Find.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Find.selected = false;
-            this.btn_Find.Size = new System.Drawing.Size(322, 59);
-            this.btn_Find.TabIndex = 86;
-            this.btn_Find.Text = "Check my Notification";
-            this.btn_Find.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Find.Textcolor = System.Drawing.Color.White;
-            this.btn_Find.TextFont = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbn_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.tbn_ID.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.tbn_ID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tbn_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbn_ID.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.tbn_ID.Location = new System.Drawing.Point(2, 8);
+            this.tbn_ID.Name = "tbn_ID";
+            this.tbn_ID.Size = new System.Drawing.Size(344, 23);
+            this.tbn_ID.TabIndex = 106;
+            this.tbn_ID.Text = "Context";
+            this.tbn_ID.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(345, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(344, 23);
+            this.button1.TabIndex = 107;
+            this.button1.Text = "Readed";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // uct_Notification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.Controls.Add(this.btn_Find);
-            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbn_ID);
+            this.Controls.Add(this.dataGid_Notification);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "uct_Notification";
-            this.Size = new System.Drawing.Size(921, 710);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            this.Size = new System.Drawing.Size(691, 577);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGid_Notification)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Find;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dataGid_Notification;
+        private System.Windows.Forms.Button tbn_ID;
+        private System.Windows.Forms.Button button1;
     }
 }

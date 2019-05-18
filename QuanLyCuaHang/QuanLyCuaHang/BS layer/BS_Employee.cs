@@ -53,7 +53,7 @@ namespace QuanLyCuaHang.BS_layer
                     _phone = (string)dataRow["PhoneNumber"].ToString().Trim();
                     _idcard = (string)dataRow["IDCard"].ToString().Trim();
                     _address = (string)dataRow["Address"].ToString().Trim();
-                   _urlImage = dataRow["UrlImage"].ToString().Trim();
+                    _urlImage = dataRow["UrlImage"].ToString().Trim();
                 }
             }
         }
@@ -92,7 +92,7 @@ namespace QuanLyCuaHang.BS_layer
         public bool isExistId(string id)
         {
             DataTable dataTable = new DataTable();
-            dataTable = db.ExecuteQueryDataSet("select IDNhanVien from NHANVIEN",CommandType.Text);
+            dataTable = db.ExecuteQueryDataSet("select IDNhanVien from NHANVIEN", CommandType.Text);
             foreach (DataRow dataRow in dataTable.Rows)
             {
                 if (id.Equals(dataRow["IDNhanVien"].ToString().Trim()))
@@ -140,23 +140,23 @@ namespace QuanLyCuaHang.BS_layer
                 byte[] imgdata = converImgToByte(path);
                 sqlString = "insert into NHANVIEN (IDNhanVien, Password, Name, " +
                     "PhoneNumber, IDCard, Address, Position,UrlImage) " +
-                    "values ('"+username+"', '"+password+"', N'"+name+"', '"+phone+"', '"+idcard+"', N'"+address+"'" +
-                    ", '"+position+"', '"+ Convert.ToBase64String(imgdata) + "')";
+                    "values ('" + username + "', '" + password + "', N'" + name + "', '" + phone + "', '" + idcard + "', N'" + address + "'" +
+                    ", '" + position + "', '" + Convert.ToBase64String(imgdata) + "')";
             }
             if (db.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
-                MessageBox.Show("Success","Notification",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("Fail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         // delete employee
-        public void deleteEmployee(string id,ref string error)
+        public void deleteEmployee(string id, ref string error)
         {
-            string sqlString = "delete from NHANVIEN where IDNhanVien = '"+id+"'";
+            string sqlString = "delete from NHANVIEN where IDNhanVien = '" + id + "'";
             db.MyExecuteNonQuery(sqlString, CommandType.Text, ref error);
         }
         // load date employee all
         public void loadDataEmployeeAll(string id, ref string _password, ref string _name, ref string _phone, ref string _idcard
-                                    , ref string _address,ref string position, ref string _urlImage)
+                                    , ref string _address, ref string position, ref string _urlImage)
         {
             DataTable dataTable = db.ExecuteQueryDataSet("select * from NHANVIEN", CommandType.Text);
             foreach (DataRow dataRow in dataTable.Rows)
@@ -189,7 +189,7 @@ namespace QuanLyCuaHang.BS_layer
                 byte[] imgdata = converImgToByte(path);
                 sqlString = "update NHANVIEN set Password = '" + password + "', Name = N'" + name + "'," +
                     " PhoneNumber = '" + phone + "', IDCard = '" + idcard + "', Address = N'" + address + "'" +
-                    ",Position = '" + position + "',UrlImage = '"+ Convert.ToBase64String(imgdata) + "'where IDNhanVien = '"+id+"'";
+                    ",Position = '" + position + "',UrlImage = '" + Convert.ToBase64String(imgdata) + "'where IDNhanVien = '" + id + "'";
             }
             if (db.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
             { MessageBox.Show("Repaid success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -201,7 +201,13 @@ namespace QuanLyCuaHang.BS_layer
         {
             return db.ExecuteQueryDataSet("select IDNhanVien, Password, Name, PhoneNumber," +
                 "IdCard, Address from NHANVIEN where (Position = 'employee' or Position = 'warehouse') and (IDNhanVien like '" + _search + "%"
-                + "' or Name like N'" + _search + "%" +"' or address like N'" + _search +"%"+ "')" , CommandType.Text);
+                + "' or Name like N'" + _search + "%" + "' or address like N'" + _search + "%" + "')", CommandType.Text);
         }
+        // load id employee
+        public DataTable loadIdEmployee(string id)
+        {
+            return db.ExecuteQueryDataSet("select IDNhanVien from NHANVIEN where not IDNhanVien = '" + id + "'", CommandType.Text);
+        }
+        
     }
 }

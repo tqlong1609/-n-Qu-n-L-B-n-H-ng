@@ -64,6 +64,7 @@
     <Compile Include="BS layer\BS_Employee.cs" />
     <Compile Include="BS layer\BS_Gift.cs" />
     <Compile Include="BS layer\BS_History.cs" />
+    <Compile Include="BS layer\BS_Notification.cs" />
     <Compile Include="BS layer\BS_Products.cs" />
     <Compile Include="BS layer\BS_SellProduct.cs" />
     <Compile Include="DB layer\DBMain.cs" />
@@ -139,11 +140,23 @@
     <Compile Include="frm_Sell.Designer.cs">
       <DependentUpon>frm_Sell.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_SendNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SendNotification.Designer.cs">
+      <DependentUpon>frm_SendNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_SendProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_SendProduct.Designer.cs">
       <DependentUpon>frm_SendProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TextNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TextNotification.Designer.cs">
+      <DependentUpon>frm_TextNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -249,8 +262,14 @@
     <EmbeddedResource Include="frm_Sell.resx">
       <DependentUpon>frm_Sell.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_SendNotification.resx">
+      <DependentUpon>frm_SendNotification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_SendProduct.resx">
       <DependentUpon>frm_SendProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TextNotification.resx">
+      <DependentUpon>frm_TextNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

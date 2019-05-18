@@ -90,3 +90,5 @@ C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLy
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_SendProduct.resources
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_GiftCode.resources
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_Sell.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_SendNotification.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_TextNotification.resources
