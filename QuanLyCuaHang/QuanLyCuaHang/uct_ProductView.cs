@@ -27,6 +27,7 @@ namespace QuanLyCuaHang
             index = 0;
             loadDataLaptop();
         }
+        #region load
         // load data laptop
         private void loadDataLaptop()
         {
@@ -75,7 +76,7 @@ namespace QuanLyCuaHang
             dataGid_Device.Columns["Image"].Visible = false;
 
         }
-
+        #endregion
         private void dataGid_Device_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
@@ -84,7 +85,7 @@ namespace QuanLyCuaHang
                 pbx_Avatar.Image = product.loadImage(dataGid_Device.Rows[index].Cells[0].Value.ToString());
             }
         }
-
+        // search
         private void txt_Search_OnValueChanged(object sender, EventArgs e)
         {
             if (txt_Search.Text != "")

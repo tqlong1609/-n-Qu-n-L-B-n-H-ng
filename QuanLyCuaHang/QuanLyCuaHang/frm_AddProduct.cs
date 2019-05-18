@@ -22,6 +22,7 @@ namespace QuanLyCuaHang
 
         private enum mode { add, repaid }
 
+        #region contrustor
         // contrustor add
         public frm_AddProduct()
         {
@@ -39,6 +40,7 @@ namespace QuanLyCuaHang
             loadData();
             btn_Add.Text = "Repaid";
         }
+        #endregion
 
         #region load data
         // load 
@@ -132,6 +134,8 @@ namespace QuanLyCuaHang
                 pbx_Avatar.Image = avatar;
         }
         #endregion
+
+        #region check
         // check input data
         private bool isEmpty()
         {
@@ -148,6 +152,7 @@ namespace QuanLyCuaHang
                 return true;
             }
         }
+        #endregion
 
         #region handle click
         // add/repaid click

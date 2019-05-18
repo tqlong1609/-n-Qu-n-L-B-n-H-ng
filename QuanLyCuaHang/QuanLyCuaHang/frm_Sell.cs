@@ -39,11 +39,13 @@ namespace QuanLyCuaHang
                 ref error))
                 MessageBox.Show(error);
         }
+        // format money vnd
         private string formatMoney(string money)
         {
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
             return double.Parse(money).ToString("#,###", cul.NumberFormat);
         }
+        // load data
         private void loadData(string idCus, int total,string dateSell,string idDis)
         {
             txt_idEmployee.Text = frm_Login.id;
@@ -52,7 +54,6 @@ namespace QuanLyCuaHang
             txt_DateSell.Text = dateSell;
             txt_idDiscount.Text = idDis;
         }
-
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -22,12 +22,25 @@ namespace QuanLyCuaHang
             bS_Product = new BS_Products();
             loadData();
         }
+        #region load
+        // load data when handle
+        private void dataGid_Detail_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (frm_AddDetailProducts.isUpdate)
+            {
+                loadData();
+                frm_AddDetailProducts.isUpdate = false;
+            }
+        }
         // load data product detail
         private void loadData()
         {
             dataGid_Detail.DataSource = bS_Product.loadDataProductDetail();
             index = 0;
         }
+        #endregion
+
+        #region handle
         // minisize
         private void btn_Minisize_Click(object sender, EventArgs e)
         {
@@ -44,12 +57,11 @@ namespace QuanLyCuaHang
         {
             new frm_AddDetailProducts().ShowDialog();
         }
-
         private void dataGid_Detail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
         }
-
+        // delete
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             if (index >= 0 && dataGid_Detail.Rows.Count > 0 && dataGid_Detail.Rows[index].Cells[0].Value.ToString() != "")
@@ -71,16 +83,7 @@ namespace QuanLyCuaHang
                 }
             }
         }
-
-        private void dataGid_Detail_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (frm_AddDetailProducts.isUpdate)
-            {
-                loadData();
-                frm_AddDetailProducts.isUpdate = false;
-            }
-        }
-
+        // repair
         private void btn_Repair_Click(object sender, EventArgs e)
         {
             if (index >= 0 && dataGid_Detail.Rows.Count > 0 && dataGid_Detail.Rows[index].Cells[0].Value.ToString() != "")
@@ -88,7 +91,7 @@ namespace QuanLyCuaHang
                 new frm_AddDetailProducts(dataGid_Detail.Rows[index].Cells[0].Value.ToString()).ShowDialog();
             }
         }
-
+        // search
         private void txt_Search_OnValueChanged(object sender, EventArgs e)
         {
             if (txt_Search.Text != "")
@@ -100,5 +103,6 @@ namespace QuanLyCuaHang
                 loadData();
             }
         }
+        #endregion
     }
 }

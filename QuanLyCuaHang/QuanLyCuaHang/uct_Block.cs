@@ -28,6 +28,7 @@ namespace QuanLyCuaHang
             frm_AddBlock temp = new frm_AddBlock();
             temp.ShowDialog();
         }
+        #region load
         // load Data Block
         private void loadData()
         {
@@ -49,7 +50,9 @@ namespace QuanLyCuaHang
                 }
             }
         }
+        #endregion
 
+        #region handle
         private void dataGrid_Block_MouseDown(object sender, MouseEventArgs e)
         {
             if (frm_AddBlock.isUpdate)
@@ -59,7 +62,7 @@ namespace QuanLyCuaHang
                 frm_AddBlock.isUpdate = false;
             }
         }
-
+        // delete
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             string idBlock;
@@ -95,7 +98,7 @@ namespace QuanLyCuaHang
         {
             index = e.RowIndex;
         }
-
+        // repaid
         private void btn_Repair_Click(object sender, EventArgs e)
         {
             string idBlock;
@@ -105,7 +108,7 @@ namespace QuanLyCuaHang
                 temp.ShowDialog();
             }
         }
-
+        // search
         private void txt_Search_OnValueChanged(object sender, EventArgs e)
         {
             if (txt_Search.Text != "")
@@ -117,5 +120,6 @@ namespace QuanLyCuaHang
                 loadData();
             }
         }
+        #endregion
     }
 }

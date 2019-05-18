@@ -19,6 +19,8 @@ namespace QuanLyCuaHang
 
         private enum Mode { add, repaid};
 
+        #region contrustor
+        // contrustor for add
         public frm_AddBlock()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace QuanLyCuaHang
             loadId();
             mode = Mode.add;
         }
-
+        // contrustor for repaid
         public frm_AddBlock(string id)
         {
             InitializeComponent();
@@ -36,6 +38,9 @@ namespace QuanLyCuaHang
             loadName(id);
             mode = Mode.repaid;
         }
+        #endregion
+
+        #region load
         // load name from id
         private void loadName(string id)
         {
@@ -49,6 +54,9 @@ namespace QuanLyCuaHang
             string id = bS_Block.loadId();
             txt_id.Text = id;
         }
+        #endregion
+
+        #region handle
         private void btn_Find_Click(object sender, EventArgs e)
         {
             //add 
@@ -79,6 +87,9 @@ namespace QuanLyCuaHang
                     MessageBox.Show("Do not enter empty values","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
+        #endregion
+
+        #region check
         // check empty input
         private bool isEmpty()
         {
@@ -86,6 +97,8 @@ namespace QuanLyCuaHang
                 return true;
             return false;
         }
+        #endregion
+
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();

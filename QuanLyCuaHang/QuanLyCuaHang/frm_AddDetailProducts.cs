@@ -19,6 +19,7 @@ namespace QuanLyCuaHang
 
         private enum Mode { add, repaid};
 
+        #region contrustor
         public frm_AddDetailProducts()
         {
             // mode add
@@ -36,7 +37,9 @@ namespace QuanLyCuaHang
             btn_Add.Text = "Repaid";
             txt_Id.Enabled = false;
         }
+        #endregion
 
+        #region load
         // load data from id for repaid
         private void loadDataId(string id)
         {
@@ -60,12 +63,9 @@ namespace QuanLyCuaHang
             txt_Battery.Text = battery;
             txt_Chip.Text = chip;
         }
+        #endregion
 
-        private void btn_Cancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        #region handle
         private void btn_Add_Click(object sender, EventArgs e)
         {
             // mode add
@@ -110,6 +110,9 @@ namespace QuanLyCuaHang
                 else MessageBox.Show("Enter full values", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
+
+        #region check
         // check exist id
         private bool isExist()
         {
@@ -123,6 +126,12 @@ namespace QuanLyCuaHang
                 || txt_FrontCamera.Text == "" || txt_BackCamera.Text == "")
                 return true;
             return false;
+        }
+        #endregion
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

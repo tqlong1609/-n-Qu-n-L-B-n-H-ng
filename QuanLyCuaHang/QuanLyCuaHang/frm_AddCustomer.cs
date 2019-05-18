@@ -19,6 +19,7 @@ namespace QuanLyCuaHang
 
         private enum Mode { add, repaid};
 
+        #region contrustor
         // constructor add
         public frm_AddCustomer()
         {
@@ -40,6 +41,9 @@ namespace QuanLyCuaHang
             mode = Mode.repaid;
             btn_Find.Text = "Repaid";
         }
+        #endregion
+
+        #region load
         // load data from id
         private void loadDataFromId(string id)
         {
@@ -68,6 +72,9 @@ namespace QuanLyCuaHang
             string id = bS_Customer.loadId();
             txt_Id.Text = id;
         }
+        #endregion
+
+        #region handle
         // add/repaid
         private void btn_Find_Click(object sender, EventArgs e)
         {
@@ -113,11 +120,9 @@ namespace QuanLyCuaHang
                 else { MessageBox.Show("Values does not empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
         }
+        #endregion
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #region check
         // check male/female
         private bool isFemale()
         {
@@ -131,6 +136,7 @@ namespace QuanLyCuaHang
                 return true;
             return false;
         }
+        #endregion
 
         private void ckbx_Male_OnChange(object sender, EventArgs e)
         {
@@ -141,5 +147,11 @@ namespace QuanLyCuaHang
         {
             ckbx_Male.Checked = false;
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

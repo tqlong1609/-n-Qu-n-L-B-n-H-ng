@@ -16,12 +16,15 @@ namespace QuanLyCuaHang.BS_layer
         {
             dBMain = new DBMain();
         }
-
+        #region load
         // load data
         public DataTable loadData()
         {
             return dBMain.ExecuteQueryDataSet("Select * from KHUYENMAI", CommandType.Text);
         }
+        #endregion
+
+        #region handle
         // add gift
         public bool addGift(string id, int giamgia,ref string error)
         {
@@ -47,6 +50,9 @@ namespace QuanLyCuaHang.BS_layer
                 return true;
             return false;
         }
+        #endregion
+
+        #region check
         // check exist id
         public bool isEsixt(string id)
         {
@@ -70,5 +76,6 @@ namespace QuanLyCuaHang.BS_layer
             }
             return false;
         }
+        #endregion
     }
 }

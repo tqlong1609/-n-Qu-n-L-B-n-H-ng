@@ -17,7 +17,7 @@ namespace QuanLyCuaHang.BS_layer
         {
             dBMain = new DBMain();
         }
-
+        #region  load
         // load data block
         public DataTable loadData()
         {
@@ -32,13 +32,23 @@ namespace QuanLyCuaHang.BS_layer
                 "on BLOCK.IDBlock = SANPHAM.IDBlock group by BLOCK.IDBlock";
             return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
-        // update amount product
-        public void updateAmount(string amount, string id)
+        // load id block send
+        public DataTable loadIdBlock(string idBlock)
         {
-            string error = "";
-            string sqlString = "update BLOCK set Amount = '" + amount + "' where IDBlock = '" + id + "'";
-            if (!dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
-                MessageBox.Show("Fail " + error);
+            return dBMain.ExecuteQueryDataSet("select IDBlock from BLOCK where not IDBlock = '" + idBlock + "'", CommandType.Text);
+        }
+        // load name from id
+        public void loadName(string id, ref string name)
+        {
+            DataTable dataTable = dBMain.ExecuteQueryDataSet("Select * from BLOCK", CommandType.Text);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                if (dataRow["IDBlock"].ToString().Trim().Equals(id.Trim()))
+                {
+                    name = dataRow["Name"].ToString().Trim();
+                    return;
+                }
+            }
         }
         // load id
         public string loadId()
@@ -52,6 +62,17 @@ namespace QuanLyCuaHang.BS_layer
                 num++;
             }
             return "BLOCK" + num;
+        }
+        #endregion
+
+        #region handle
+        // update amount product
+        public void updateAmount(string amount, string id)
+        {
+            string error = "";
+            string sqlString = "update BLOCK set Amount = '" + amount + "' where IDBlock = '" + id + "'";
+            if (!dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                MessageBox.Show("Fail " + error);
         }
         // add block
         public void addBlock(string id, string name)
@@ -73,11 +94,6 @@ namespace QuanLyCuaHang.BS_layer
             else
                 MessageBox.Show("Success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        // load id block send
-        public DataTable loadIdBlock(string idBlock)
-        {
-            return dBMain.ExecuteQueryDataSet("select IDBlock from BLOCK where not IDBlock = '"+idBlock+"'", CommandType.Text);
-        }
         // send product 
         public void sendProduct(string id_temp, string id_new)
         {
@@ -87,19 +103,6 @@ namespace QuanLyCuaHang.BS_layer
             if (!dBMain.MyExecuteNonQuery("update SANPHAM set IDBlock = '" + id_new + "' where IDBlock = '" + id_temp + "'",
                         CommandType.Text, ref error))
                 MessageBox.Show("Fail\n" + error);
-        }
-        // load name from id
-        public void loadName(string id, ref string name)
-        {
-            DataTable dataTable = dBMain.ExecuteQueryDataSet("Select * from BLOCK", CommandType.Text);
-            foreach (DataRow dataRow in dataTable.Rows)
-            {
-                if (dataRow["IDBlock"].ToString().Trim().Equals(id.Trim()))
-                {
-                    name = dataRow["Name"].ToString().Trim();
-                    return;
-                }
-            }
         }
         // repaid block
         public bool repaidBlock(string id, string name, ref string error)
@@ -116,5 +119,6 @@ namespace QuanLyCuaHang.BS_layer
             string sqlString = "select * from BLOCK where IDBlock like N'"+_search+"%' or Name like N'"+_search+"%'";
             return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
+        #endregion
     }
 }

@@ -17,11 +17,15 @@ namespace QuanLyCuaHang.BS_layer
         {
             dBMain = new DBMain();
         }
+        #region load
         // load data
         public DataTable loadData()
         {
             return dBMain.ExecuteQueryDataSet("select * from HOADON", CommandType.Text);
         }
+        #endregion
+
+        #region handle
         // delete data
         public bool deleteHoaDon(string id, ref string error)
         {
@@ -30,11 +34,13 @@ namespace QuanLyCuaHang.BS_layer
                 return false;
             return true;
         }
+        // search hoa don
         public DataTable searchHoaDon(string _search)
         {
             string sqlString = "select * from HOADON where IDHoaDon like '"+_search+"%' or IDNhanVien like '"+_search+"%' " +
                 "or IDKhachHang like '"+_search+"%' or NgayBan like '%"+_search+"%'";
             return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
+        #endregion
     }
 }

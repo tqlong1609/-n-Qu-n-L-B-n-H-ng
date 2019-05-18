@@ -16,17 +16,8 @@ namespace QuanLyCuaHang.BS_layer
         {
             dBMain = new DBMain();
         }
-
-        // send notification
-        public bool sendNotification(string idEmployee, string context,ref string error)
-        {
-            string id = loadId();
-            if (dBMain.MyExecuteNonQuery("insert into THONGBAO (IDThongBao,IDNhanVien,NoiDung) " +
-                "values ('"+id+"','"+idEmployee+"',N'"+context+"')",
-                System.Data.CommandType.Text, ref error))
-                return true;
-            return false;
-        }
+        
+        #region load
         // load id
         public string loadId()
         {
@@ -46,6 +37,9 @@ namespace QuanLyCuaHang.BS_layer
             return dBMain.ExecuteQueryDataSet("select IDThongBao ,NoiDung, TrangThai from THONGBAO where IDNhanVien = '"+id+"'",
                 CommandType.Text);
         }
+        #endregion
+
+        #region check
         // check state readed
         public bool checkState(string id, ref string error)
         {
@@ -53,5 +47,33 @@ namespace QuanLyCuaHang.BS_layer
                 return true;
             return false;
         }
+        #endregion
+
+        #region handle
+        // send notification
+        public bool sendNotification(string idEmployee, string context, ref string error)
+        {
+            string id = loadId();
+            if (dBMain.MyExecuteNonQuery("insert into THONGBAO (IDThongBao,IDNhanVien,NoiDung) " +
+                "values ('" + id + "','" + idEmployee + "',N'" + context + "')",
+                System.Data.CommandType.Text, ref error))
+                return true;
+            return false;
+        }
+        //remove notification from id employee
+        public bool removeNotIdEmployee(string id,ref string error)
+        {
+            if (dBMain.MyExecuteNonQuery("delete from THONGBAO where IDNhanVien = '"+id+"'", CommandType.Text, ref error))
+                return true;
+            return false;
+        }
+        // remove notification from id notification
+        public bool removeNotIdNotificate(string id, ref string error)
+        {
+            if (dBMain.MyExecuteNonQuery("delete from THONGBAO where IDThongBao = '" + id + "'", CommandType.Text, ref error))
+                return true;
+            return false;
+        }
+        #endregion
     }
 }

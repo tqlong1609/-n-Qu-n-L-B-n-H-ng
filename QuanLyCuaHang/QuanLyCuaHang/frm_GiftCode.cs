@@ -30,6 +30,8 @@ namespace QuanLyCuaHang
             loadData();
             loadValueRepaid();
         }
+
+        #region control button
         // enable
         private void Enable()
         {
@@ -42,17 +44,38 @@ namespace QuanLyCuaHang
             txt_id.Enabled = true;
             txt_discount.Enabled = true;
         }
+        #endregion
 
+        #region handle
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btn_Minisize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
 
+        #region load
+        private void dataGid_Gift_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+            if (index >= 0 && dataGid_Gift.Rows.Count > 0 && dataGid_Gift.Rows[index].Cells[0].Value.ToString() != "")
+            {
+                loadValueRepaid();
+            }
+        }
+        // load value repaid
+        private void loadValueRepaid()
+        {
+            if (index >= 0 && dataGid_Gift.Rows.Count > 0 && dataGid_Gift.Rows[index].Cells[1].Value.ToString().Trim() != "")
+            {
+                string discount = dataGid_Gift.Rows[index].Cells[1].Value.ToString().Trim();
+                txt_discount.Text = discount.Split('%')[0];
+                id = txt_id.Text = dataGid_Gift.Rows[index].Cells[0].Value.ToString().Trim();
+            }
+        }
         // load data
         private void loadData()
         {
@@ -62,7 +85,10 @@ namespace QuanLyCuaHang
             else
                 btn_Discount.Location = new Point(242, btn_Discount.Location.Y);
         }
+        #endregion
 
+        #region handle
+        // add
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if (mode == Mode.nomal)
@@ -124,7 +150,7 @@ namespace QuanLyCuaHang
                 txt_id.Focus();
             }
         }
-
+        // delete
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             string error = "";
@@ -203,7 +229,7 @@ namespace QuanLyCuaHang
                 txt_id.Focus();
             }
         }
-
+        // cancel
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             Enable();
@@ -217,24 +243,8 @@ namespace QuanLyCuaHang
             btn_Delete.Enabled = true;
             btn_Cancel.Enabled = false;
         }
+        #endregion
 
-        private void dataGid_Gift_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            index = e.RowIndex;
-            if (index >= 0 && dataGid_Gift.Rows.Count > 0 && dataGid_Gift.Rows[index].Cells[0].Value.ToString() != "")
-            {
-                loadValueRepaid();
-            }
-        }
-        // load value repaid
-        private void loadValueRepaid()
-        {
-            if (index >= 0 && dataGid_Gift.Rows.Count > 0 && dataGid_Gift.Rows[index].Cells[1].Value.ToString().Trim() != "")
-            {
-                string discount = dataGid_Gift.Rows[index].Cells[1].Value.ToString().Trim();
-                txt_discount.Text = discount.Split('%')[0];
-                id = txt_id.Text = dataGid_Gift.Rows[index].Cells[0].Value.ToString().Trim();
-            }
-        }
+
     }
 }

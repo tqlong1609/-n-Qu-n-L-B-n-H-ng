@@ -21,13 +21,15 @@ namespace QuanLyCuaHang
 
         private enum mode { add, repaid}
 
+        #region contrustor
+        // contrustor for add
         public frm_AddEmployee()
         {
             InitializeComponent();
             mMode = mode.add;
             load();
         }
-        
+        // contrustor for repaid
         public frm_AddEmployee(string id)
         {
             InitializeComponent();
@@ -38,6 +40,9 @@ namespace QuanLyCuaHang
             btn_Find.Text = "Repair";
             loadData();
         }
+        #endregion
+
+        #region load
         // load 
         private void load()
         {
@@ -47,6 +52,7 @@ namespace QuanLyCuaHang
             cbx_position.AddItem("employee");
             cbx_position.selectedIndex = 0;
         }
+        // load data
         private void loadData()
         {
             string pass = "";
@@ -77,6 +83,9 @@ namespace QuanLyCuaHang
                 pbx_Avatar.Image = image;
             }
         }
+        #endregion
+
+        #region convert
         // convert byte to image
         private Image ByteToImg(string byteString)
         {
@@ -86,9 +95,24 @@ namespace QuanLyCuaHang
             Image image = Image.FromStream(ms, true);
             return image;
         }
+        #endregion
+
+        #region handle
+        // edit avatar
+        private void btn_EditAvatar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pbx_Avatar.Image = Image.FromFile(fileDialog.FileName);
+                path = fileDialog.FileName;
+            }
+        }
+        // add / repaid
         private void btn_Find_Click(object sender, EventArgs e)
         {
-            if (mMode == mode.add)
+            if (mMode == mode.add) // add
             {
                 string error = "";
                 if (isEmpty()) { MessageBox.Show("Request enter full", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -113,7 +137,7 @@ namespace QuanLyCuaHang
                     }
                 }
             }
-            else
+            else // repaid
             {
                 string error = "";
                 if (isEmpty()) { MessageBox.Show("Request enter full", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -133,6 +157,9 @@ namespace QuanLyCuaHang
                 }
             }
         }
+        #endregion
+
+        #region check
         // check empty value
         private bool isEmpty()
         {
@@ -143,20 +170,13 @@ namespace QuanLyCuaHang
             }
             return false;
         }
+        #endregion
+
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btn_EditAvatar_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pbx_Avatar.Image = Image.FromFile(fileDialog.FileName);
-                path = fileDialog.FileName;
-            }
-        }
+        
     }
 }

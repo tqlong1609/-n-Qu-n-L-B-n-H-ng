@@ -26,13 +26,13 @@ namespace QuanLyCuaHang
             loadCustomer();
             loadProducts();
         }
-
+        // add
         private void btn_Add_Click(object sender, EventArgs e)
         {
             frm_AddCustomer temp = new frm_AddCustomer();
             temp.ShowDialog();
         }
-
+        // sell
         private void btn_Sell_Click(object sender, EventArgs e)
         {
             if (txt_customer_added.Text != "" && lvw_ProductSell.Items.Count > 0)
@@ -66,6 +66,7 @@ namespace QuanLyCuaHang
             DateTime dateTime = DateTime.UtcNow.Date;
             return dateTime.ToString("dd/MM/yyyy");
         }
+        // clear
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             clear();
@@ -96,7 +97,7 @@ namespace QuanLyCuaHang
                 frm_AddCustomer.isUpdate = false;
             }
         }
-
+        // search
         private void txt_SearchCustomer_OnValueChanged(object sender, EventArgs e)
         {
             if (txt_SearchCustomer.Text != "")

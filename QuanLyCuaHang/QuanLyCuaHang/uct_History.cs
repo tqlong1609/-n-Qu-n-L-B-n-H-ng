@@ -61,5 +61,10 @@ namespace QuanLyCuaHang
                 loadData();
             }
         }
+
+        private void btn_Export_Click(object sender, EventArgs e)
+        {
+            new frm_ReportHistory().ShowDialog();
+        }
     }
 }

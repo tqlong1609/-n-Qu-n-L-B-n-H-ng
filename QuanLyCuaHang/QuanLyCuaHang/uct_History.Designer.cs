@@ -62,6 +62,7 @@
             this.btn_Find.LabelPosition = 29;
             this.btn_Find.LabelText = "Find";
             this.btn_Find.Location = new System.Drawing.Point(278, 3);
+            this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.Size = new System.Drawing.Size(57, 60);
             this.btn_Find.TabIndex = 44;
@@ -81,9 +82,11 @@
             this.btn_Export.LabelPosition = 29;
             this.btn_Export.LabelText = "Export";
             this.btn_Export.Location = new System.Drawing.Point(215, 3);
+            this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(57, 60);
             this.btn_Export.TabIndex = 43;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
             // 
             // btn_Delete
             // 
@@ -100,6 +103,7 @@
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
             this.btn_Delete.Location = new System.Drawing.Point(152, 3);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(57, 60);
             this.btn_Delete.TabIndex = 41;
@@ -118,6 +122,7 @@
             this.txt_Search.ForeColor = System.Drawing.Color.White;
             this.txt_Search.isPassword = false;
             this.txt_Search.Location = new System.Drawing.Point(341, 13);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Search.MaxLength = 32767;
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(227, 36);
@@ -292,7 +297,7 @@
             this.Controls.Add(this.btn_Find);
             this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Delete);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uct_History";
             this.Size = new System.Drawing.Size(691, 577);
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_History)).EndInit();

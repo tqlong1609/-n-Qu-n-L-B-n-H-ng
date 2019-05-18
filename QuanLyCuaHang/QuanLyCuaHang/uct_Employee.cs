@@ -14,6 +14,7 @@ namespace QuanLyCuaHang
     public partial class uct_Employee : UserControl
     {
         private BS_Employee bS_Employee;
+        private BS_Notification bS_Notification;
         private DataTable data;
         private int index ;
         private string error;
@@ -25,9 +26,12 @@ namespace QuanLyCuaHang
         {
             InitializeComponent();
             bS_Employee = new BS_Employee();
+            bS_Notification = new BS_Notification();
             loadDataSalesman();
             employee = Employee.salesman;
         }
+
+        #region load
         // load data both
         private void loadDataBoth()
         {
@@ -69,48 +73,14 @@ namespace QuanLyCuaHang
         {
             loadDataWareHouseStaff();
         }
+        #endregion
 
-        private void btn_Delete_Click(object sender, EventArgs e)
-        {
-            if (index >= 0 &&  dataGrid_Employee.Rows.Count > 0)
-            {
-                try
-                {
-                    if (MessageBox.Show("Are you sure", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                        == DialogResult.Yes)
-                    {
-                        bS_Employee.deleteEmployee(dataGrid_Employee.Rows[index].Cells[0].Value.ToString(), ref error);
-                        MessageBox.Show("Remove success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        checkLoadEmployee();
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show(error);
-                }
-            }
-        }
-        // check load employee
-        public void checkLoadEmployee()
-        {
-            switch (employee)
-            {
-                case Employee.salesman:
-                    loadDataSalesman();
-                    break;
-                case Employee.both:
-                    loadDataBoth();
-                    break;
-                case Employee.warehouse:
-                    loadDataWareHouseStaff();
-                    break;
-            }
-        }
+        #region handle
         private void dataGrid_Employee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
         }
-
+        // repaid
         private void btn_Repair_Click(object sender, EventArgs e)
         {
             if (index >= 0 && dataGrid_Employee.Rows.Count > 0)
@@ -136,5 +106,45 @@ namespace QuanLyCuaHang
         {
             new frm_SendNotification().ShowDialog();
         }
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (index >= 0 &&  dataGrid_Employee.Rows.Count > 0)
+            {
+                try
+                {
+                    if (MessageBox.Show("Are you sure", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                        == DialogResult.Yes)
+                    {
+                        bS_Notification.removeNotIdEmployee(dataGrid_Employee.Rows[index].Cells[0].Value.ToString(), ref error);
+                        bS_Employee.deleteEmployee(dataGrid_Employee.Rows[index].Cells[0].Value.ToString(), ref error);
+                        MessageBox.Show("Remove success", "Congratuation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        checkLoadEmployee();
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show(error);
+                }
+            }
+        }
+        #endregion
+
+        // check load employee
+        public void checkLoadEmployee()
+        {
+            switch (employee)
+            {
+                case Employee.salesman:
+                    loadDataSalesman();
+                    break;
+                case Employee.both:
+                    loadDataBoth();
+                    break;
+                case Employee.warehouse:
+                    loadDataWareHouseStaff();
+                    break;
+            }
+        }
+        
     }
 }

@@ -16,6 +16,7 @@ namespace QuanLyCuaHang
         private BS_Notification bS_Notification;
         private DataTable dataTable;
         private string id;
+        private int index;
         public uct_Notification()
         {
             InitializeComponent();
@@ -44,6 +45,30 @@ namespace QuanLyCuaHang
             {
                 new frm_TextNotification(dataGid_Notification.Rows[index].Cells[1].Value.ToString()).ShowDialog();
                 loadNotification(frm_Login.id);
+            }
+        }
+
+        private void dataGid_Notification_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+        }
+        // delete
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (index >= 0 && dataGid_Notification.Rows.Count > 0 && dataGid_Notification.Rows[index].Cells[0].Value.ToString() != "")
+            {
+                if (MessageBox.Show("Are you sure ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    == DialogResult.Yes)
+                {
+                    string error = "";
+                    if (!bS_Notification.removeNotIdNotificate(dataGid_Notification.Rows[index].Cells[0].Value.ToString(), ref error))
+                        MessageBox.Show(error);
+                    else
+                    {
+                        MessageBox.Show("Success","Notification",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        loadNotification(frm_Login.id);
+                    }
+                }
             }
         }
     }

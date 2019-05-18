@@ -21,6 +21,7 @@ namespace QuanLyCuaHang
             InitializeComponent();
             employee = new BS_Employee();
         }
+
         // exit
         private void btn_Exit_Click(object sender, EventArgs e)
         {

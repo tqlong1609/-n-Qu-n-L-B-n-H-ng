@@ -42,9 +42,12 @@ namespace QuanLyCuaHang
 
         private void btn_Send_Click(object sender, EventArgs e)
         {
-            Sended = true;
-            sendProduct(cbx_IDBlock.selectedValue);
-            this.Close();
+            if (cbx_IDBlock.selectedIndex != -1)
+            {
+                Sended = true;
+                sendProduct(cbx_IDBlock.selectedValue);
+                this.Close();
+            }
         }
 
         // send product
