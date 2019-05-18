@@ -71,5 +71,44 @@ namespace QuanLyCuaHang.BS_layer
             }
             return t;
         }
+        // delete values after sell
+        public bool deleteSelled(List<string> idProducts, string idDiscount,ref string error)
+        {
+            if (idDiscount != "")
+            {
+                string sqlString = "delete from KHUYENMAI where IDKhuyenMai = '" + idDiscount + "'";
+                if (!dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                    return false;
+            }
+            for (int i = 0; i < idProducts.Count; i++)
+            {
+                string sqlString = "delete from SANPHAM where IDSanPham = '" + idProducts[i]+"'";
+                if (!dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                    return false;
+            }
+            return true;
+        }
+        // save values into history
+        public bool saveHistory(string idBill, string idEmployee, string idcustomer, int totalPrice,
+            string dateSell, string idDiscount, int finalPrice,ref string error)
+        {
+            string sqlString;
+            if (idDiscount != "")
+            {
+                sqlString = "insert into HOADON (IDHoaDon,IDNhanVien,IDKhachHang,TongTien,NgayBan,IDDiscount" +
+                    ",TongTienCuoi) " + "values('" + idBill + "', '" + idEmployee + "', '" + idcustomer + "', "
+                    + totalPrice + ", '" + dateSell + "', '" + idDiscount + "', " + finalPrice + ")";
+            }
+            else
+            {
+                sqlString = "insert into HOADON (IDHoaDon,IDNhanVien,IDKhachHang,TongTien,NgayBan,TongTienCuoi) " +
+                    "values('"+idBill+"', '"+idEmployee+"', '"+idcustomer+"', "+totalPrice+", '"+dateSell+"', "+finalPrice+")";
+            }
+            if (dBMain.MyExecuteNonQuery(sqlString, CommandType.Text, ref error))
+                return true;
+            else
+                return false;
+                
+        }
     }
 }

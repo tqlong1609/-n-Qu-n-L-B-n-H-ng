@@ -229,9 +229,12 @@ namespace QuanLyCuaHang
         // load value repaid
         private void loadValueRepaid()
         {
-            string discount = dataGid_Gift.Rows[index].Cells[1].Value.ToString().Trim();
-            txt_discount.Text = discount.Split('%')[0];
-            id = txt_id.Text = dataGid_Gift.Rows[index].Cells[0].Value.ToString().Trim();
+            if (index >= 0 && dataGid_Gift.Rows.Count > 0 && dataGid_Gift.Rows[index].Cells[1].Value.ToString().Trim() != "")
+            {
+                string discount = dataGid_Gift.Rows[index].Cells[1].Value.ToString().Trim();
+                txt_discount.Text = discount.Split('%')[0];
+                id = txt_id.Text = dataGid_Gift.Rows[index].Cells[0].Value.ToString().Trim();
+            }
         }
     }
 }

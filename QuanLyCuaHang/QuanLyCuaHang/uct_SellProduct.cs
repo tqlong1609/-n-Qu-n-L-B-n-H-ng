@@ -16,11 +16,13 @@ namespace QuanLyCuaHang
         private BS_SellProduct bS_SellProduct;
         private int totalPrice = 0;
         private string idCustomer;
+        private List<string> listProductSelled;
 
         public uct_SellProduct()
         {
             InitializeComponent();
             bS_SellProduct = new BS_SellProduct();
+            listProductSelled = new List<string>();
             loadCustomer();
             loadProducts();
         }
@@ -40,6 +42,8 @@ namespace QuanLyCuaHang
                 {
                     MessageBox.Show("Cell Success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     new frm_Sell(idCustomer, totalPrice, loadDateSell(), txt_idDiscount.Text, discount).ShowDialog();
+                    deleteSelled();
+                    clear();
                 }
                 else
                     MessageBox.Show("id discount not true","Error",MessageBoxButtons.OK,MessageBoxIcon.None);
@@ -47,6 +51,15 @@ namespace QuanLyCuaHang
             else
                 MessageBox.Show("Do not empty values before confirm","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
+        // delete values after selled
+        public void deleteSelled()
+        {
+            string error = "";
+            if (!bS_SellProduct.deleteSelled(listProductSelled, txt_idDiscount.Text, ref error))
+                MessageBox.Show(error);
+            else
+                loadProducts();
+        }   
         // load date sell
         public string loadDateSell()
         {
@@ -55,7 +68,13 @@ namespace QuanLyCuaHang
         }
         private void btn_Clear_Click(object sender, EventArgs e)
         {
+            clear();
+        }
+        // clear
+        private void clear()
+        {
             lvw_ProductSell.Clear();
+            listProductSelled.Clear();
             totalPrice = 0;
         }
         // load customer
@@ -104,13 +123,15 @@ namespace QuanLyCuaHang
 
         private void dataGid_Customer_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txt_customer_added.Text = idCustomer = dataGid_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_customer_added.Text = idCustomer = dataGid_Customer.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
 
         private void dataGid_Products_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             lvw_ProductSell.Items.Add(dataGid_Products.Rows[e.RowIndex].Cells[1].Value.ToString());
             totalPrice += int.Parse(dataGid_Products.Rows[e.RowIndex].Cells[2].Value.ToString());
+            listProductSelled.Add(dataGid_Products.Rows[e.RowIndex].Cells[0].Value.ToString());
+
         }
     }
 }

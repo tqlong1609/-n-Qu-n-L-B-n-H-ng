@@ -16,15 +16,28 @@ namespace QuanLyCuaHang
     {
         private BS_SellProduct bS_SellProduct;
 
-        public frm_Sell(string name, int total, string dateSell, string idDiscount, string discount)
+        public frm_Sell(string idcus, int total, string dateSell, string idDiscount, string discount)
         {
             InitializeComponent();
             bS_SellProduct = new BS_SellProduct();
-            loadData(name, total, dateSell, idDiscount);
+            loadData(idcus, total, dateSell, idDiscount);
             loadIdBill();
             if (idDiscount == "")
                 discount = "0%";
             txt_FinalTotal.Text = formatMoney(getFinalPrice(discount, total).ToString());
+            saveHistory(total,discount);
+        }
+        // save values into history
+        private void saveHistory(int total,string discount)
+        {
+            string error = "";
+            string dateSell = txt_DateSell.Text;
+            string[] arr = dateSell.Trim().Split('-');
+            dateSell = arr[2] +"-"+ arr[1] + "-" + arr[0];
+            if (!bS_SellProduct.saveHistory(txt_idBill.Text, txt_idEmployee.Text, txt_idCustomer.Text,
+                total, dateSell, txt_idDiscount.Text, getFinalPrice(discount, total),
+                ref error))
+                MessageBox.Show(error);
         }
         private string formatMoney(string money)
         {
@@ -50,7 +63,7 @@ namespace QuanLyCuaHang
             txt_idBill.Text = bS_SellProduct.loadId();
         }
         // get final total price
-        private double getFinalPrice(string _discount, int price)
+        private int getFinalPrice(string _discount, int price)
         {
             int idcount = int.Parse(_discount.Split('%')[0]);
             return price - ((price * idcount) / 100);
