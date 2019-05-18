@@ -175,5 +175,10 @@ namespace QuanLyCuaHang
                 checkLoadProduct();
             frm_AddProduct.isUpdate = false;
         }
+
+        private void btn_Find_Click(object sender, EventArgs e)
+        {
+            new frm_WatchProducts().Show();
+        }
     }
 }

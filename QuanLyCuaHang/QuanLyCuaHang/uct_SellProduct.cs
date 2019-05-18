@@ -26,6 +26,8 @@ namespace QuanLyCuaHang
             loadCustomer();
             loadProducts();
         }
+
+        #region handle
         // add
         private void btn_Add_Click(object sender, EventArgs e)
         {
@@ -59,12 +61,6 @@ namespace QuanLyCuaHang
                 MessageBox.Show(error);
             else
                 loadProducts();
-        }   
-        // load date sell
-        public string loadDateSell()
-        {
-            DateTime dateTime = DateTime.UtcNow.Date;
-            return dateTime.ToString("dd/MM/yyyy");
         }
         // clear
         private void btn_Clear_Click(object sender, EventArgs e)
@@ -78,17 +74,6 @@ namespace QuanLyCuaHang
             listProductSelled.Clear();
             totalPrice = 0;
         }
-        // load customer
-        private void loadCustomer()
-        {
-            dataGid_Customer.DataSource = bS_SellProduct.loadCustomer();
-        }
-        // load Products
-        private void loadProducts()
-        {
-            dataGid_Products.DataSource = bS_SellProduct.loadProducts();
-        }
-
         private void dataGid_Customer_MouseDown(object sender, MouseEventArgs e)
         {
             if (frm_AddCustomer.isUpdate)
@@ -109,6 +94,27 @@ namespace QuanLyCuaHang
                 loadCustomer();
             }
         }
+        #endregion
+
+        #region load
+        // load date sell
+        public string loadDateSell()
+        {
+            DateTime dateTime = DateTime.UtcNow.Date;
+            return dateTime.ToString("dd/MM/yyyy");
+        }
+        // load customer
+        private void loadCustomer()
+        {
+            dataGid_Customer.DataSource = bS_SellProduct.loadCustomer();
+        }
+        // load Products
+        private void loadProducts()
+        {
+            dataGid_Products.DataSource = bS_SellProduct.loadProducts();
+        }
+        #endregion
+        
 
         private void txt_SearchProducts_OnValueChanged(object sender, EventArgs e)
         {

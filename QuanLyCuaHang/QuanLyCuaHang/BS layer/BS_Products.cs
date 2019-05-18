@@ -64,6 +64,12 @@ namespace QuanLyCuaHang.BS_layer
             string sqlString = "select * from SANPHAM";
             return dBMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
+        // load product and detail products
+        public DataTable loadDetailAndProduct()
+        {
+            return dBMain.ExecuteQueryDataSet("select Image,Name,Price,ManHinh,CameraTruoc,CameraSau,os," +
+                "ram,Rom,DungLuongPin,Chip from SANPHAM, DETAIL where SANPHAM.IDDetail = DETAIL.IDDetail", CommandType.Text);
+        }
         // load product laptop
         public DataTable loadLaptop()
         {

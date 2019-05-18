@@ -116,5 +116,10 @@ namespace QuanLyCuaHang
                     break;
             }
         }
+
+        private void btn_Watch_Click(object sender, EventArgs e)
+        {
+            new frm_WatchProducts().Show();
+        }
     }
 }

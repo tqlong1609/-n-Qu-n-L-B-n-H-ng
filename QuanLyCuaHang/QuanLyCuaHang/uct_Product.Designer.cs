@@ -245,6 +245,7 @@
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.Size = new System.Drawing.Size(57, 55);
             this.btn_Find.TabIndex = 31;
+            this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
             // 
             // btn_Export
             // 

@@ -47,6 +47,7 @@
             this.IDDetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateSell = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pbx_Avatar = new System.Windows.Forms.PictureBox();
+            this.btn_Watch = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Device)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Avatar)).BeginInit();
@@ -369,11 +370,33 @@
             this.pbx_Avatar.TabIndex = 93;
             this.pbx_Avatar.TabStop = false;
             // 
+            // btn_Watch
+            // 
+            this.btn_Watch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Watch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_Watch.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_Watch.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
+            this.btn_Watch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Watch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Watch.ForeColor = System.Drawing.Color.White;
+            this.btn_Watch.Image = ((System.Drawing.Image)(resources.GetObject("btn_Watch.Image")));
+            this.btn_Watch.ImagePosition = 14;
+            this.btn_Watch.ImageZoom = 30;
+            this.btn_Watch.LabelPosition = 29;
+            this.btn_Watch.LabelText = "Find";
+            this.btn_Watch.Location = new System.Drawing.Point(592, 90);
+            this.btn_Watch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Watch.Name = "btn_Watch";
+            this.btn_Watch.Size = new System.Drawing.Size(57, 55);
+            this.btn_Watch.TabIndex = 94;
+            this.btn_Watch.Click += new System.EventHandler(this.btn_Watch_Click);
+            // 
             // uct_ProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.Controls.Add(this.btn_Watch);
             this.Controls.Add(this.pbx_Avatar);
             this.Controls.Add(this.dataGid_Device);
             this.Controls.Add(this.panel1);
@@ -407,5 +430,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDDetail;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateSell;
         private System.Windows.Forms.PictureBox pbx_Avatar;
+        private Bunifu.Framework.UI.BunifuTileButton btn_Watch;
     }
 }

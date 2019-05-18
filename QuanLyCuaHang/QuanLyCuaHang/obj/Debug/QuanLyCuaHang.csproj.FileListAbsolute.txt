@@ -196,3 +196,6 @@ C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLy
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.csprojAssemblyReference.cache
 C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.exe.config
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.DetailLayout.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.frm_WatchProducts.resources
+C:\Users\Tran Long\Desktop\New folder\Project_QuanLyBanHang\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.LayoutProducts.resources
