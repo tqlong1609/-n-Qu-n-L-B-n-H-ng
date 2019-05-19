@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uct_Customer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_Find = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btn_Export = new Bunifu.Framework.UI.BunifuTileButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Repair = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Delete = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Add = new Bunifu.Framework.UI.BunifuTileButton();
@@ -45,48 +43,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btn_GiftCode = new Bunifu.Framework.UI.BunifuTileButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Customer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Find
-            // 
-            this.btn_Find.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Find.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_Find.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_Find.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
-            this.btn_Find.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Find.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Find.ForeColor = System.Drawing.Color.White;
-            this.btn_Find.Image = ((System.Drawing.Image)(resources.GetObject("btn_Find.Image")));
-            this.btn_Find.ImagePosition = 14;
-            this.btn_Find.ImageZoom = 30;
-            this.btn_Find.LabelPosition = 29;
-            this.btn_Find.LabelText = "Find";
-            this.btn_Find.Location = new System.Drawing.Point(359, 3);
-            this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_Find.Name = "btn_Find";
-            this.btn_Find.Size = new System.Drawing.Size(57, 55);
-            this.btn_Find.TabIndex = 38;
-            // 
-            // btn_Export
-            // 
-            this.btn_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_Export.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_Export.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
-            this.btn_Export.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Export.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Export.ForeColor = System.Drawing.Color.White;
-            this.btn_Export.Image = ((System.Drawing.Image)(resources.GetObject("btn_Export.Image")));
-            this.btn_Export.ImagePosition = 14;
-            this.btn_Export.ImageZoom = 30;
-            this.btn_Export.LabelPosition = 29;
-            this.btn_Export.LabelText = "Export";
-            this.btn_Export.Location = new System.Drawing.Point(296, 3);
-            this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_Export.Name = "btn_Export";
-            this.btn_Export.Size = new System.Drawing.Size(57, 65);
-            this.btn_Export.TabIndex = 37;
             // 
             // btn_Repair
             // 
@@ -102,7 +62,7 @@
             this.btn_Repair.ImageZoom = 30;
             this.btn_Repair.LabelPosition = 29;
             this.btn_Repair.LabelText = "Repair";
-            this.btn_Repair.Location = new System.Drawing.Point(233, 3);
+            this.btn_Repair.Location = new System.Drawing.Point(277, 1);
             this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
             this.btn_Repair.Size = new System.Drawing.Size(57, 65);
@@ -123,7 +83,7 @@
             this.btn_Delete.ImageZoom = 30;
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
-            this.btn_Delete.Location = new System.Drawing.Point(170, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(214, 1);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(63, 65);
@@ -144,10 +104,10 @@
             this.btn_Add.ImageZoom = 30;
             this.btn_Add.LabelPosition = 29;
             this.btn_Add.LabelText = "Add";
-            this.btn_Add.Location = new System.Drawing.Point(108, 3);
+            this.btn_Add.Location = new System.Drawing.Point(152, 0);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(56, 65);
+            this.btn_Add.Size = new System.Drawing.Size(56, 66);
             this.btn_Add.TabIndex = 34;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
@@ -191,31 +151,31 @@
             this.dataGid_Customer.AllowUserToAddRows = false;
             this.dataGid_Customer.AllowUserToResizeColumns = false;
             this.dataGid_Customer.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGid_Customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGid_Customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGid_Customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGid_Customer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
             this.dataGid_Customer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGid_Customer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGid_Customer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGid_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGid_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGid_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGid_Customer.ColumnHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGid_Customer.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGid_Customer.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGid_Customer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGid_Customer.DoubleBuffered = true;
             this.dataGid_Customer.EnableHeadersVisualStyles = false;
@@ -309,18 +269,28 @@
             this.btn_GiftCode.ImageZoom = 30;
             this.btn_GiftCode.LabelPosition = 29;
             this.btn_GiftCode.LabelText = "Gift Code";
-            this.btn_GiftCode.Location = new System.Drawing.Point(5, 3);
+            this.btn_GiftCode.Location = new System.Drawing.Point(26, -5);
             this.btn_GiftCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_GiftCode.Name = "btn_GiftCode";
-            this.btn_GiftCode.Size = new System.Drawing.Size(93, 63);
+            this.btn_GiftCode.Size = new System.Drawing.Size(91, 71);
             this.btn_GiftCode.TabIndex = 90;
             this.btn_GiftCode.Click += new System.EventHandler(this.btn_GiftCode_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(388, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox1.TabIndex = 95;
+            this.pictureBox1.TabStop = false;
             // 
             // uct_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_GiftCode);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
@@ -329,8 +299,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGid_Customer);
             this.Controls.Add(this.txt_Search);
-            this.Controls.Add(this.btn_Find);
-            this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Repair);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
@@ -338,14 +306,12 @@
             this.Name = "uct_Customer";
             this.Size = new System.Drawing.Size(691, 577);
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Customer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuTileButton btn_Find;
-        private Bunifu.Framework.UI.BunifuTileButton btn_Export;
         private Bunifu.Framework.UI.BunifuTileButton btn_Repair;
         private Bunifu.Framework.UI.BunifuTileButton btn_Delete;
         private Bunifu.Framework.UI.BunifuTileButton btn_Add;
@@ -357,5 +323,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private Bunifu.Framework.UI.BunifuTileButton btn_GiftCode;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

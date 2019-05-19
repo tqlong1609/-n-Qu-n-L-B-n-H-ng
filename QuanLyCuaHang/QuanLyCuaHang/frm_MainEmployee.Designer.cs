@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MainEmployee));
             this.pnl_Main = new System.Windows.Forms.Panel();
             this.btn_Notification = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,18 +44,17 @@
             this.pbx_Logo = new System.Windows.Forms.PictureBox();
             this.bt_MenuAnimation = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.btn_Help = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Sell = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pnl_Bar = new System.Windows.Forms.Panel();
             this.btn_Menu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pnl_Bar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_LogoSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minisize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_IconPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Logo)).BeginInit();
             this.pnl_Menu.SuspendLayout();
-            this.pnl_Bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
+            this.pnl_Bar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Main
@@ -64,7 +63,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pnl_Main, BunifuAnimatorNS.DecorationType.None);
             this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Main.Location = new System.Drawing.Point(209, 46);
-            this.pnl_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Main.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Main.Name = "pnl_Main";
             this.pnl_Main.Size = new System.Drawing.Size(691, 577);
             this.pnl_Main.TabIndex = 5;
@@ -130,7 +129,7 @@
             this.btn_Logout.IconVisible = true;
             this.btn_Logout.IconZoom = 40D;
             this.btn_Logout.IsTab = true;
-            this.btn_Logout.Location = new System.Drawing.Point(2, 401);
+            this.btn_Logout.Location = new System.Drawing.Point(2, 346);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btn_Logout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
@@ -149,7 +148,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pbx_LogoSlide, BunifuAnimatorNS.DecorationType.None);
             this.pbx_LogoSlide.Image = ((System.Drawing.Image)(resources.GetObject("pbx_LogoSlide.Image")));
             this.pbx_LogoSlide.Location = new System.Drawing.Point(-5, 47);
-            this.pbx_LogoSlide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbx_LogoSlide.Margin = new System.Windows.Forms.Padding(2);
             this.pbx_LogoSlide.Name = "pbx_LogoSlide";
             this.pbx_LogoSlide.Size = new System.Drawing.Size(58, 76);
             this.pbx_LogoSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,7 +199,7 @@
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
             this.btn_Exit.ImageActive = null;
             this.btn_Exit.Location = new System.Drawing.Point(870, 10);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(19, 20);
             this.btn_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -215,7 +214,7 @@
             this.btn_Minisize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minisize.Image")));
             this.btn_Minisize.ImageActive = null;
             this.btn_Minisize.Location = new System.Drawing.Point(843, 10);
-            this.btn_Minisize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Minisize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Minisize.Name = "btn_Minisize";
             this.btn_Minisize.Size = new System.Drawing.Size(22, 24);
             this.btn_Minisize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -246,7 +245,7 @@
             this.bt_MenuAnimation.SetDecoration(this.lbl_IconPosition, BunifuAnimatorNS.DecorationType.None);
             this.lbl_IconPosition.Image = ((System.Drawing.Image)(resources.GetObject("lbl_IconPosition.Image")));
             this.lbl_IconPosition.Location = new System.Drawing.Point(9, 10);
-            this.lbl_IconPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbl_IconPosition.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_IconPosition.Name = "lbl_IconPosition";
             this.lbl_IconPosition.Size = new System.Drawing.Size(24, 26);
             this.lbl_IconPosition.TabIndex = 0;
@@ -297,7 +296,7 @@
             this.bt_MenuAnimation.SetDecoration(this.pbx_Logo, BunifuAnimatorNS.DecorationType.None);
             this.pbx_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pbx_Logo.Image")));
             this.pbx_Logo.Location = new System.Drawing.Point(-26, 17);
-            this.pbx_Logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbx_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.pbx_Logo.Name = "pbx_Logo";
             this.pbx_Logo.Size = new System.Drawing.Size(193, 93);
             this.pbx_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -308,27 +307,26 @@
             // 
             this.bt_MenuAnimation.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.bt_MenuAnimation.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 1;
-            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 2F;
-            animation3.TransparencyCoeff = 0F;
-            this.bt_MenuAnimation.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 1;
+            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 2F;
+            animation1.TransparencyCoeff = 0F;
+            this.bt_MenuAnimation.DefaultAnimation = animation1;
             // 
             // pnl_Menu
             // 
             this.pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnl_Menu.Controls.Add(this.btn_Help);
             this.pnl_Menu.Controls.Add(this.btn_Sell);
             this.pnl_Menu.Controls.Add(this.btn_Notification);
             this.pnl_Menu.Controls.Add(this.btn_Logout);
@@ -340,46 +338,10 @@
             this.bt_MenuAnimation.SetDecoration(this.pnl_Menu, BunifuAnimatorNS.DecorationType.None);
             this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_Menu.Location = new System.Drawing.Point(0, 46);
-            this.pnl_Menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Menu.Name = "pnl_Menu";
             this.pnl_Menu.Size = new System.Drawing.Size(209, 577);
             this.pnl_Menu.TabIndex = 3;
-            // 
-            // btn_Help
-            // 
-            this.btn_Help.Active = false;
-            this.btn_Help.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
-            this.btn_Help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btn_Help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Help.BorderRadius = 0;
-            this.btn_Help.ButtonText = "    Help";
-            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_MenuAnimation.SetDecoration(this.btn_Help, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Help.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Help.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Help.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Help.Iconimage")));
-            this.btn_Help.Iconimage_right = null;
-            this.btn_Help.Iconimage_right_Selected = null;
-            this.btn_Help.Iconimage_Selected = null;
-            this.btn_Help.IconMarginLeft = 0;
-            this.btn_Help.IconMarginRight = 0;
-            this.btn_Help.IconRightVisible = true;
-            this.btn_Help.IconRightZoom = 0D;
-            this.btn_Help.IconVisible = true;
-            this.btn_Help.IconZoom = 40D;
-            this.btn_Help.IsTab = true;
-            this.btn_Help.Location = new System.Drawing.Point(2, 347);
-            this.btn_Help.Name = "btn_Help";
-            this.btn_Help.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btn_Help.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
-            this.btn_Help.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Help.selected = false;
-            this.btn_Help.Size = new System.Drawing.Size(207, 48);
-            this.btn_Help.TabIndex = 25;
-            this.btn_Help.Text = "    Help";
-            this.btn_Help.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Help.Textcolor = System.Drawing.Color.White;
-            this.btn_Help.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Sell
             // 
@@ -418,24 +380,6 @@
             this.btn_Sell.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sell.Click += new System.EventHandler(this.btn_Sell_Click);
             // 
-            // pnl_Bar
-            // 
-            this.pnl_Bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
-            this.pnl_Bar.Controls.Add(this.btn_Exit);
-            this.pnl_Bar.Controls.Add(this.btn_Minisize);
-            this.pnl_Bar.Controls.Add(this.lbl_Position);
-            this.pnl_Bar.Controls.Add(this.lbl_IconPosition);
-            this.bt_MenuAnimation.SetDecoration(this.pnl_Bar, BunifuAnimatorNS.DecorationType.None);
-            this.pnl_Bar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Bar.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnl_Bar.Name = "pnl_Bar";
-            this.pnl_Bar.Size = new System.Drawing.Size(900, 46);
-            this.pnl_Bar.TabIndex = 4;
-            this.pnl_Bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_Bar_MouseDown);
-            this.pnl_Bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Bar_MouseMove);
-            this.pnl_Bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_Bar_MouseUp);
-            // 
             // btn_Menu
             // 
             this.btn_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -451,6 +395,24 @@
             this.btn_Menu.TabStop = false;
             this.btn_Menu.Zoom = 10;
             // 
+            // pnl_Bar
+            // 
+            this.pnl_Bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
+            this.pnl_Bar.Controls.Add(this.btn_Exit);
+            this.pnl_Bar.Controls.Add(this.btn_Minisize);
+            this.pnl_Bar.Controls.Add(this.lbl_Position);
+            this.pnl_Bar.Controls.Add(this.lbl_IconPosition);
+            this.bt_MenuAnimation.SetDecoration(this.pnl_Bar, BunifuAnimatorNS.DecorationType.None);
+            this.pnl_Bar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Bar.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Bar.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_Bar.Name = "pnl_Bar";
+            this.pnl_Bar.Size = new System.Drawing.Size(900, 46);
+            this.pnl_Bar.TabIndex = 4;
+            this.pnl_Bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_Bar_MouseDown);
+            this.pnl_Bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_Bar_MouseMove);
+            this.pnl_Bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_Bar_MouseUp);
+            // 
             // frm_MainEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,7 +423,7 @@
             this.Controls.Add(this.pnl_Bar);
             this.bt_MenuAnimation.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_MainEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_MainEmployee";
@@ -471,9 +433,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbl_IconPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Logo)).EndInit();
             this.pnl_Menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.pnl_Bar.ResumeLayout(false);
             this.pnl_Bar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,7 +457,6 @@
         private System.Windows.Forms.Panel pnl_Menu;
         private System.Windows.Forms.Panel pnl_Bar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Sell;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Help;
         private Bunifu.Framework.UI.BunifuImageButton btn_Menu;
     }
 }

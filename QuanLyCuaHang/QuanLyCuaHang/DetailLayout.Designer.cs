@@ -42,6 +42,7 @@
             // 
             this.lblChip.AutoSize = true;
             this.lblChip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChip.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblChip.Location = new System.Drawing.Point(3, 196);
             this.lblChip.Name = "lblChip";
             this.lblChip.Size = new System.Drawing.Size(38, 15);
@@ -52,6 +53,7 @@
             // 
             this.lblPin.AutoSize = true;
             this.lblPin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPin.Location = new System.Drawing.Point(3, 169);
             this.lblPin.Name = "lblPin";
             this.lblPin.Size = new System.Drawing.Size(30, 15);
@@ -62,6 +64,7 @@
             // 
             this.lblRom.AutoSize = true;
             this.lblRom.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblRom.Location = new System.Drawing.Point(3, 142);
             this.lblRom.Name = "lblRom";
             this.lblRom.Size = new System.Drawing.Size(38, 15);
@@ -72,6 +75,7 @@
             // 
             this.lblRam.AutoSize = true;
             this.lblRam.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblRam.Location = new System.Drawing.Point(3, 115);
             this.lblRam.Name = "lblRam";
             this.lblRam.Size = new System.Drawing.Size(37, 15);
@@ -82,6 +86,7 @@
             // 
             this.lblOS.AutoSize = true;
             this.lblOS.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblOS.Location = new System.Drawing.Point(3, 88);
             this.lblOS.Name = "lblOS";
             this.lblOS.Size = new System.Drawing.Size(28, 15);
@@ -92,6 +97,7 @@
             // 
             this.lblCamSau.AutoSize = true;
             this.lblCamSau.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCamSau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCamSau.Location = new System.Drawing.Point(3, 61);
             this.lblCamSau.Name = "lblCamSau";
             this.lblCamSau.Size = new System.Drawing.Size(75, 15);
@@ -102,6 +108,7 @@
             // 
             this.lblCamTruoc.AutoSize = true;
             this.lblCamTruoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCamTruoc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCamTruoc.Location = new System.Drawing.Point(3, 34);
             this.lblCamTruoc.Name = "lblCamTruoc";
             this.lblCamTruoc.Size = new System.Drawing.Size(85, 15);
@@ -112,6 +119,7 @@
             // 
             this.lblManHinh.AutoSize = true;
             this.lblManHinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManHinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblManHinh.Location = new System.Drawing.Point(3, 7);
             this.lblManHinh.Name = "lblManHinh";
             this.lblManHinh.Size = new System.Drawing.Size(64, 15);

@@ -66,7 +66,7 @@
             this.dataGid_Notification.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGid_Notification.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dataGid_Notification.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dataGid_Notification.Location = new System.Drawing.Point(2, 106);
+            this.dataGid_Notification.Location = new System.Drawing.Point(0, 26);
             this.dataGid_Notification.Margin = new System.Windows.Forms.Padding(2);
             this.dataGid_Notification.MultiSelect = false;
             this.dataGid_Notification.Name = "dataGid_Notification";
@@ -91,7 +91,7 @@
             this.tbn_ID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbn_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbn_ID.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.tbn_ID.Location = new System.Drawing.Point(2, 82);
+            this.tbn_ID.Location = new System.Drawing.Point(0, 2);
             this.tbn_ID.Name = "tbn_ID";
             this.tbn_ID.Size = new System.Drawing.Size(344, 23);
             this.tbn_ID.TabIndex = 106;
@@ -105,7 +105,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(345, 82);
+            this.button1.Location = new System.Drawing.Point(343, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(344, 23);
             this.button1.TabIndex = 107;
@@ -126,11 +126,11 @@
             this.btn_Delete.ImageZoom = 30;
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
-            this.btn_Delete.Location = new System.Drawing.Point(317, 3);
+            this.btn_Delete.Location = new System.Drawing.Point(317, 501);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(57, 71);
-            this.btn_Delete.TabIndex = 108;
+            this.btn_Delete.Size = new System.Drawing.Size(63, 71);
+            this.btn_Delete.TabIndex = 109;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // uct_Notification

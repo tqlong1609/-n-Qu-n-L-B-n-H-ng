@@ -28,7 +28,7 @@ namespace QuanLyCuaHang
         }
 
         // Set giá trị cho layout
-        public void SetValue(Image image, string tensanpham, int gia)
+        public void SetValue(Image image, string tensanpham, string gia)
         {
             pbxSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxSanPham.Image = image;

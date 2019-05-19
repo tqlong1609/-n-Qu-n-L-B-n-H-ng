@@ -45,7 +45,7 @@ namespace QuanLyCuaHang.BS_layer
 
         #region handle
         // add customer
-        public bool addCustomer(string id, string name, int phone, string address, bool isFemale,ref string error)
+        public bool addCustomer(string id, string name, string phone, string address, bool isFemale,ref string error)
         {
             byte _isFemale = 0;
             if (isFemale) _isFemale = 1;
@@ -63,7 +63,7 @@ namespace QuanLyCuaHang.BS_layer
             return false;
         }
         // repaid customer
-        public bool repaidCustomer(string id, string name, int phone, string address, bool gender,ref string error)
+        public bool repaidCustomer(string id, string name, string phone, string address, bool gender,ref string error)
         {
             byte _gender = 0;
             if (gender) _gender = 1;

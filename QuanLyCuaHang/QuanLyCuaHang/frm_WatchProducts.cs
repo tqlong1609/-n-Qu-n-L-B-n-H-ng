@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -33,7 +34,7 @@ namespace QuanLyCuaHang
                 else
                     image = ByteToImg(dataRow["Image"].ToString().Trim());
                 layoutSanPham.SetValue(image, dataRow["Name"].ToString().Trim(),
-                    int.Parse(dataRow["Price"].ToString().Trim()));
+                    formatMoney(dataRow["Price"].ToString().Trim()));
                 layoutSanPham.SetDetail(dataRow["ManHinh"].ToString().Trim(),
                     dataRow["CameraTruoc"].ToString().Trim(), dataRow["CameraSau"].ToString().Trim()
                     , dataRow["OS"].ToString().Trim(), dataRow["Ram"].ToString().Trim(), dataRow["Rom"].ToString().Trim(),
@@ -41,6 +42,12 @@ namespace QuanLyCuaHang
                 flpLayout.Controls.Add(layoutSanPham);
                 i++;
             }
+        }
+        // format money vnd
+        private string formatMoney(string money)
+        {
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+            return double.Parse(money).ToString("#,###", cul.NumberFormat);
         }
         // convert byte to image
         private Image ByteToImg(string byteString)

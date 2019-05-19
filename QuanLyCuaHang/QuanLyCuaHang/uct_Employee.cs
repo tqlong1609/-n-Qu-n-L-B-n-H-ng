@@ -145,6 +145,5 @@ namespace QuanLyCuaHang
                     break;
             }
         }
-        
     }
 }

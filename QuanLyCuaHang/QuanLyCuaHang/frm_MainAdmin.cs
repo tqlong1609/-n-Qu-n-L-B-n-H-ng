@@ -52,30 +52,6 @@ namespace QuanLyCuaHang
             MoveForm.Release();
         }
         #endregion
-
-        private void btn_Menu_Click(object sender, EventArgs e)
-        {
-            //if (pnl_Menu.Width == origin_menu_width)
-            //{
-            //    //Collapse
-            //    pbx_Logo.Visible = false;
-            //    pnl_Menu.Visible = false;
-            //    pnl_Menu.Width = slide_menu_width;
-            //    bt_MenuAnimation.ShowSync(pnl_Menu);
-            //    pbx_LogoSlide.Visible = true;
-            //}
-            //else
-            //{
-            //    //Expand
-            //    pnl_Menu.Visible = false;
-            //    pnl_Menu.Width = origin_menu_width;
-            //    pbx_LogoSlide.Visible = false;
-            //    pbx_Logo.Visible = true;
-            //    bt_MenuAnimation.ShowSync(pnl_Menu);
-                
-            //}
-        }
-
         
         private void btn_Profile_Click(object sender, EventArgs e)
         {

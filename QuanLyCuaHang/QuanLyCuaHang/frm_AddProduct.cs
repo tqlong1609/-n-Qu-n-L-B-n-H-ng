@@ -85,7 +85,15 @@ namespace QuanLyCuaHang
             foreach (DataRow dataRow in dataTable.Rows)
             {
                 if (!dataRow["IDSanPham"].ToString().Contains(num.ToString()))
+                {
+                    if (dataRow["IDSanPham"].ToString().Length != num.ToString().Length
+                        || dataRow["IDSanPham"].ToString().Equals(num.ToString()))
+                    {
+                        num++;
+                        continue;
+                    }
                     return "SP" + num;
+                }
                 num++;
             }
             return "SP" + num;
@@ -185,6 +193,7 @@ namespace QuanLyCuaHang
                     {
                         bS_Products.repaidProduct(id, cbx_IdCategory.selectedValue, txt_Name.Text, txt_Price.Text, cbx_IdBlock.selectedValue,
                             cbx_IdDetail.selectedValue, path, ref error);
+                        isUpdate = true;
                         this.Close();
                     }
                     catch (Exception) { MessageBox.Show(error); }

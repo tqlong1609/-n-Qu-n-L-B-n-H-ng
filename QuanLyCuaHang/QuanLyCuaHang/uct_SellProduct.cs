@@ -28,6 +28,32 @@ namespace QuanLyCuaHang
         }
 
         #region handle
+        // search
+        private void txt_SearchProducts_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txt_SearchProducts.Text != "")
+            {
+                dataGid_Products.DataSource = bS_SellProduct.searchProducts(txt_SearchProducts.Text.Trim().ToLower());
+            }
+            else
+            {
+                loadProducts();
+            }
+            changeLoctionProducts();
+        }
+
+        private void dataGid_Customer_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txt_customer_added.Text = idCustomer = dataGid_Customer.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void dataGid_Products_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            lvw_ProductSell.Items.Add(dataGid_Products.Rows[e.RowIndex].Cells[1].Value.ToString());
+            totalPrice += int.Parse(dataGid_Products.Rows[e.RowIndex].Cells[2].Value.ToString());
+            listProductSelled.Add(dataGid_Products.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+        }
         // add
         private void btn_Add_Click(object sender, EventArgs e)
         {
@@ -48,10 +74,10 @@ namespace QuanLyCuaHang
                     clear();
                 }
                 else
-                    MessageBox.Show("id discount not true","Error",MessageBoxButtons.OK,MessageBoxIcon.None);
+                    MessageBox.Show("id discount not true", "Error", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else
-                MessageBox.Show("Do not empty values before confirm","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Do not empty values before confirm", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         // delete values after selled
         public void deleteSelled()
@@ -93,6 +119,7 @@ namespace QuanLyCuaHang
             {
                 loadCustomer();
             }
+            changLocationCustomer();
         }
         #endregion
 
@@ -107,38 +134,44 @@ namespace QuanLyCuaHang
         private void loadCustomer()
         {
             dataGid_Customer.DataSource = bS_SellProduct.loadCustomer();
+            changLocationCustomer();
+
         }
         // load Products
         private void loadProducts()
         {
             dataGid_Products.DataSource = bS_SellProduct.loadProducts();
+            changeLoctionProducts();
         }
         #endregion
-        
 
-        private void txt_SearchProducts_OnValueChanged(object sender, EventArgs e)
+        #region change location
+        // change location product
+        private void changeLoctionProducts()
         {
-            if (txt_SearchProducts.Text != "")
+            if (dataGid_Products.Rows.Count > 5)
             {
-                dataGid_Products.DataSource = bS_SellProduct.searchProducts(txt_SearchProducts.Text.Trim().ToLower());
+                btn_4.Location = new Point(228 - 6, btn_4.Location.Y);
+                btn_5.Location = new Point(322 - 12, btn_4.Location.Y);
             }
             else
             {
-                loadProducts();
+                btn_4.Location = new Point(228, btn_4.Location.Y);
+                btn_5.Location = new Point(322, btn_4.Location.Y);
             }
-        }
 
-        private void dataGid_Customer_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        }
+        // change location customer
+        private void changLocationCustomer()
         {
-            txt_customer_added.Text = idCustomer = dataGid_Customer.Rows[e.RowIndex].Cells[0].Value.ToString();
+            if (dataGid_Customer.Rows.Count > 6)
+            {
+                btn_2.Location = new Point(278 - 9, btn_1.Location.Y);
+            }
+            else
+                btn_2.Location = new Point(278, btn_1.Location.Y);
         }
-
-        private void dataGid_Products_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            lvw_ProductSell.Items.Add(dataGid_Products.Rows[e.RowIndex].Cells[1].Value.ToString());
-            totalPrice += int.Parse(dataGid_Products.Rows[e.RowIndex].Cells[2].Value.ToString());
-            listProductSelled.Add(dataGid_Products.Rows[e.RowIndex].Cells[0].Value.ToString());
-
-        }
+        #endregion
+        
     }
 }

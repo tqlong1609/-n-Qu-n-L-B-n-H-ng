@@ -83,19 +83,14 @@ namespace QuanLyCuaHang
             {
                 if (!isEmpty())
                 {
-                    int numPhone;
-                    if (int.TryParse(txt_Phone.Text, out numPhone))
+                    string error = "";
+                    if (bS_Customer.addCustomer(txt_Id.Text, txt_Name.Text, txt_Phone.Text, txt_Address.Text, isFemale(), ref error))
                     {
-                        string error = "";
-                        if (bS_Customer.addCustomer(txt_Id.Text, txt_Name.Text, numPhone, txt_Address.Text, isFemale(), ref error))
-                        {
-                            MessageBox.Show("Success", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            isUpdate = true;
-                            this.Close();
-                        }
-                        else MessageBox.Show(error);
+                        MessageBox.Show("Success", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        isUpdate = true;
+                        this.Close();
                     }
-                    else { MessageBox.Show("Phone number is not string","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); txt_Phone.Text = ""; txt_Phone.Focus(); }
+                    else MessageBox.Show(error);
                 }
                 else { MessageBox.Show("Values does not empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
@@ -103,19 +98,14 @@ namespace QuanLyCuaHang
             {
                 if (!isEmpty())
                 {
-                    int numPhone;
-                    if (int.TryParse(txt_Phone.Text, out numPhone))
+                    string error = "";
+                    if (bS_Customer.repaidCustomer(txt_Id.Text, txt_Name.Text, txt_Phone.Text, txt_Address.Text, isFemale(), ref error))
                     {
-                        string error = "";
-                        if (bS_Customer.repaidCustomer(txt_Id.Text, txt_Name.Text, numPhone, txt_Address.Text, isFemale(), ref error))
-                        {
-                            MessageBox.Show("Success", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            isUpdate = true;
-                            this.Close();
-                        }
-                        else MessageBox.Show(error);
+                        MessageBox.Show("Success", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        isUpdate = true;
+                        this.Close();
                     }
-                    else { MessageBox.Show("Phone number is not string", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); txt_Phone.Text = ""; txt_Phone.Focus(); }
+                    else MessageBox.Show(error);
                 }
                 else { MessageBox.Show("Values does not empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }

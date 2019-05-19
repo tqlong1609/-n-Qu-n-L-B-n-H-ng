@@ -46,11 +46,11 @@
             this.txt_customer_added = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btn_Clear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGid_Products = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_1 = new System.Windows.Forms.Button();
+            this.btn_2 = new System.Windows.Forms.Button();
+            this.btn_3 = new System.Windows.Forms.Button();
+            this.btn_4 = new System.Windows.Forms.Button();
+            this.btn_5 = new System.Windows.Forms.Button();
             this.lvw_ProductSell = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Customer)).BeginInit();
@@ -360,75 +360,75 @@
             this.dataGid_Products.TabIndex = 92;
             this.dataGid_Products.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGid_Products_CellMouseDoubleClick);
             // 
-            // button1
+            // btn_1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(137, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 23);
-            this.button1.TabIndex = 93;
-            this.button1.Text = "ID Customer";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_1.Location = new System.Drawing.Point(137, 89);
+            this.btn_1.Name = "btn_1";
+            this.btn_1.Size = new System.Drawing.Size(142, 23);
+            this.btn_1.TabIndex = 93;
+            this.btn_1.Text = "ID Customer";
+            this.btn_1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(278, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 23);
-            this.button2.TabIndex = 94;
-            this.button2.Text = "Name";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_2.Location = new System.Drawing.Point(278, 89);
+            this.btn_2.Name = "btn_2";
+            this.btn_2.Size = new System.Drawing.Size(142, 23);
+            this.btn_2.TabIndex = 94;
+            this.btn_2.Text = "Name";
+            this.btn_2.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn_3
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(134, 309);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 23);
-            this.button4.TabIndex = 95;
-            this.button4.Text = "ID Product";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_3.Location = new System.Drawing.Point(134, 309);
+            this.btn_3.Name = "btn_3";
+            this.btn_3.Size = new System.Drawing.Size(95, 23);
+            this.btn_3.TabIndex = 95;
+            this.btn_3.Text = "ID Product";
+            this.btn_3.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_4
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(228, 309);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 23);
-            this.button3.TabIndex = 96;
-            this.button3.Text = "Name";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_4.Location = new System.Drawing.Point(228, 309);
+            this.btn_4.Name = "btn_4";
+            this.btn_4.Size = new System.Drawing.Size(95, 23);
+            this.btn_4.TabIndex = 96;
+            this.btn_4.Text = "Name";
+            this.btn_4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(322, 309);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(95, 23);
-            this.button5.TabIndex = 97;
-            this.button5.Text = "Price";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_5.Location = new System.Drawing.Point(322, 309);
+            this.btn_5.Name = "btn_5";
+            this.btn_5.Size = new System.Drawing.Size(95, 23);
+            this.btn_5.TabIndex = 97;
+            this.btn_5.Text = "Price";
+            this.btn_5.UseVisualStyleBackColor = false;
             // 
             // lvw_ProductSell
             // 
@@ -450,11 +450,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_5);
+            this.Controls.Add(this.btn_4);
+            this.Controls.Add(this.btn_3);
+            this.Controls.Add(this.btn_2);
+            this.Controls.Add(this.btn_1);
             this.Controls.Add(this.dataGid_Products);
             this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.txt_customer_added);
@@ -495,11 +495,11 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_customer_added;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Clear;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGid_Products;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_1;
+        private System.Windows.Forms.Button btn_2;
+        private System.Windows.Forms.Button btn_3;
+        private System.Windows.Forms.Button btn_4;
+        private System.Windows.Forms.Button btn_5;
         private System.Windows.Forms.ListView lvw_ProductSell;
     }
 }

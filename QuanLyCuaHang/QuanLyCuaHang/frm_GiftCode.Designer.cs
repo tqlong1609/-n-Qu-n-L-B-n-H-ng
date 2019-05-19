@@ -117,10 +117,10 @@
             this.btn_Repair.ImageZoom = 30;
             this.btn_Repair.LabelPosition = 29;
             this.btn_Repair.LabelText = "Repair";
-            this.btn_Repair.Location = new System.Drawing.Point(227, 9);
+            this.btn_Repair.Location = new System.Drawing.Point(227, 1);
             this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
-            this.btn_Repair.Size = new System.Drawing.Size(71, 63);
+            this.btn_Repair.Size = new System.Drawing.Size(71, 71);
             this.btn_Repair.TabIndex = 90;
             this.btn_Repair.Click += new System.EventHandler(this.btn_Repair_Click);
             // 
@@ -138,10 +138,10 @@
             this.btn_Delete.ImageZoom = 30;
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
-            this.btn_Delete.Location = new System.Drawing.Point(153, 9);
+            this.btn_Delete.Location = new System.Drawing.Point(153, 1);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(57, 63);
+            this.btn_Delete.Size = new System.Drawing.Size(57, 71);
             this.btn_Delete.TabIndex = 89;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
@@ -159,10 +159,10 @@
             this.btn_Add.ImageZoom = 30;
             this.btn_Add.LabelPosition = 29;
             this.btn_Add.LabelText = "Add";
-            this.btn_Add.Location = new System.Drawing.Point(65, 9);
+            this.btn_Add.Location = new System.Drawing.Point(65, 1);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(78, 63);
+            this.btn_Add.Size = new System.Drawing.Size(78, 71);
             this.btn_Add.TabIndex = 88;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
@@ -296,10 +296,10 @@
             this.btn_Cancel.ImageZoom = 30;
             this.btn_Cancel.LabelPosition = 29;
             this.btn_Cancel.LabelText = "Cancel";
-            this.btn_Cancel.Location = new System.Drawing.Point(308, 9);
+            this.btn_Cancel.Location = new System.Drawing.Point(308, 1);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(71, 63);
+            this.btn_Cancel.Size = new System.Drawing.Size(71, 71);
             this.btn_Cancel.TabIndex = 107;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 

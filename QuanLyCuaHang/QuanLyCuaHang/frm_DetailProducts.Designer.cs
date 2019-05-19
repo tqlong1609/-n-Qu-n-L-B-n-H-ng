@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_Search = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.btn_Find = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Repair = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Delete = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Add = new Bunifu.Framework.UI.BunifuTileButton();
@@ -48,9 +47,11 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minisize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -87,26 +88,6 @@
             this.txt_Search.TabIndex = 98;
             this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_Search.OnValueChanged += new System.EventHandler(this.txt_Search_OnValueChanged);
-            // 
-            // btn_Find
-            // 
-            this.btn_Find.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Find.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.btn_Find.color = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.btn_Find.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
-            this.btn_Find.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Find.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Find.ForeColor = System.Drawing.Color.White;
-            this.btn_Find.Image = ((System.Drawing.Image)(resources.GetObject("btn_Find.Image")));
-            this.btn_Find.ImagePosition = 14;
-            this.btn_Find.ImageZoom = 30;
-            this.btn_Find.LabelPosition = 29;
-            this.btn_Find.LabelText = "Find";
-            this.btn_Find.Location = new System.Drawing.Point(319, 22);
-            this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_Find.Name = "btn_Find";
-            this.btn_Find.Size = new System.Drawing.Size(57, 60);
-            this.btn_Find.TabIndex = 97;
             // 
             // btn_Repair
             // 
@@ -357,6 +338,15 @@
             this.button9.Text = "Chip";
             this.button9.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(351, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox1.TabIndex = 111;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_DetailProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +354,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(675, 538);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -376,7 +367,6 @@
             this.Controls.Add(this.btn_Minisize);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_Search);
-            this.Controls.Add(this.btn_Find);
             this.Controls.Add(this.btn_Repair);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
@@ -388,6 +378,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minisize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,7 +386,6 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_Search;
-        private Bunifu.Framework.UI.BunifuTileButton btn_Find;
         private Bunifu.Framework.UI.BunifuTileButton btn_Repair;
         private Bunifu.Framework.UI.BunifuTileButton btn_Delete;
         private Bunifu.Framework.UI.BunifuTileButton btn_Add;
@@ -410,5 +400,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

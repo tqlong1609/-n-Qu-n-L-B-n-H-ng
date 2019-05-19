@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnl_Menu = new System.Windows.Forms.Panel();
             this.btn_History = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -37,7 +37,6 @@
             this.btn_Logout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbx_LogoSlide = new System.Windows.Forms.PictureBox();
             this.btn_Info = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Help = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Customer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Product = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Employee = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -69,7 +68,6 @@
             this.pnl_Menu.Controls.Add(this.btn_Logout);
             this.pnl_Menu.Controls.Add(this.pbx_LogoSlide);
             this.pnl_Menu.Controls.Add(this.btn_Info);
-            this.pnl_Menu.Controls.Add(this.btn_Help);
             this.pnl_Menu.Controls.Add(this.btn_Customer);
             this.pnl_Menu.Controls.Add(this.btn_Product);
             this.pnl_Menu.Controls.Add(this.btn_Employee);
@@ -181,7 +179,7 @@
             this.btn_Logout.IconVisible = true;
             this.btn_Logout.IconZoom = 40D;
             this.btn_Logout.IsTab = true;
-            this.btn_Logout.Location = new System.Drawing.Point(2, 513);
+            this.btn_Logout.Location = new System.Drawing.Point(2, 482);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btn_Logout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
@@ -231,7 +229,7 @@
             this.btn_Info.IconVisible = true;
             this.btn_Info.IconZoom = 40D;
             this.btn_Info.IsTab = true;
-            this.btn_Info.Location = new System.Drawing.Point(2, 465);
+            this.btn_Info.Location = new System.Drawing.Point(2, 424);
             this.btn_Info.Name = "btn_Info";
             this.btn_Info.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btn_Info.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
@@ -244,43 +242,6 @@
             this.btn_Info.Textcolor = System.Drawing.Color.White;
             this.btn_Info.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Info.Click += new System.EventHandler(this.btn_Info_Click);
-            // 
-            // btn_Help
-            // 
-            this.btn_Help.Active = false;
-            this.btn_Help.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
-            this.btn_Help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btn_Help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Help.BorderRadius = 0;
-            this.btn_Help.ButtonText = "    Help";
-            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_MenuAnimation.SetDecoration(this.btn_Help, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Help.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Help.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Help.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Help.Iconimage")));
-            this.btn_Help.Iconimage_right = null;
-            this.btn_Help.Iconimage_right_Selected = null;
-            this.btn_Help.Iconimage_Selected = null;
-            this.btn_Help.IconMarginLeft = 0;
-            this.btn_Help.IconMarginRight = 0;
-            this.btn_Help.IconRightVisible = true;
-            this.btn_Help.IconRightZoom = 0D;
-            this.btn_Help.IconVisible = true;
-            this.btn_Help.IconZoom = 40D;
-            this.btn_Help.IsTab = true;
-            this.btn_Help.Location = new System.Drawing.Point(2, 417);
-            this.btn_Help.Name = "btn_Help";
-            this.btn_Help.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btn_Help.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(206)))));
-            this.btn_Help.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Help.selected = false;
-            this.btn_Help.Size = new System.Drawing.Size(207, 48);
-            this.btn_Help.TabIndex = 18;
-            this.btn_Help.Text = "    Help";
-            this.btn_Help.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Help.Textcolor = System.Drawing.Color.White;
-            this.btn_Help.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
             // 
             // btn_Customer
             // 
@@ -444,7 +405,6 @@
             this.btn_Menu.TabIndex = 1;
             this.btn_Menu.TabStop = false;
             this.btn_Menu.Zoom = 10;
-            this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
             // pbx_Logo
             // 
@@ -540,22 +500,22 @@
             // 
             this.bt_MenuAnimation.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.bt_MenuAnimation.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.bt_MenuAnimation.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 1;
+            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 2F;
+            animation2.TransparencyCoeff = 0F;
+            this.bt_MenuAnimation.DefaultAnimation = animation2;
             // 
             // pnl_Main
             // 
@@ -604,7 +564,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_Minisize;
         private BunifuAnimatorNS.BunifuTransition bt_MenuAnimation;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Info;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Help;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Customer;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Product;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Employee;

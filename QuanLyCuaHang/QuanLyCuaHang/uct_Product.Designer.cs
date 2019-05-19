@@ -37,28 +37,25 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Find = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btn_Export = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Repair = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Delete = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Add = new Bunifu.Framework.UI.BunifuTileButton();
             this.dataGid_Device = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txt_Search = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pbx_Avatar = new System.Windows.Forms.PictureBox();
+            this.btn_ShowDetail = new Bunifu.Framework.UI.BunifuTileButton();
             this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDBlock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDDetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateSell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_Search = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.pbx_Avatar = new System.Windows.Forms.PictureBox();
-            this.btn_ShowDetail = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_2 = new System.Windows.Forms.Button();
+            this.btn_4 = new System.Windows.Forms.Button();
+            this.btn_3 = new System.Windows.Forms.Button();
+            this.btn_6 = new System.Windows.Forms.Button();
+            this.btn_5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGid_Device)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Avatar)).BeginInit();
@@ -239,33 +236,13 @@
             this.btn_Find.ImagePosition = 14;
             this.btn_Find.ImageZoom = 30;
             this.btn_Find.LabelPosition = 29;
-            this.btn_Find.LabelText = "Find";
-            this.btn_Find.Location = new System.Drawing.Point(423, 73);
+            this.btn_Find.LabelText = "Products";
+            this.btn_Find.Location = new System.Drawing.Point(413, 70);
             this.btn_Find.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Find.Name = "btn_Find";
-            this.btn_Find.Size = new System.Drawing.Size(57, 55);
+            this.btn_Find.Size = new System.Drawing.Size(76, 67);
             this.btn_Find.TabIndex = 31;
             this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
-            // 
-            // btn_Export
-            // 
-            this.btn_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_Export.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_Export.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
-            this.btn_Export.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Export.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Export.ForeColor = System.Drawing.Color.White;
-            this.btn_Export.Image = ((System.Drawing.Image)(resources.GetObject("btn_Export.Image")));
-            this.btn_Export.ImagePosition = 14;
-            this.btn_Export.ImageZoom = 30;
-            this.btn_Export.LabelPosition = 29;
-            this.btn_Export.LabelText = "Export";
-            this.btn_Export.Location = new System.Drawing.Point(360, 73);
-            this.btn_Export.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_Export.Name = "btn_Export";
-            this.btn_Export.Size = new System.Drawing.Size(57, 55);
-            this.btn_Export.TabIndex = 30;
             // 
             // btn_Repair
             // 
@@ -281,10 +258,10 @@
             this.btn_Repair.ImageZoom = 30;
             this.btn_Repair.LabelPosition = 29;
             this.btn_Repair.LabelText = "Repair";
-            this.btn_Repair.Location = new System.Drawing.Point(297, 73);
+            this.btn_Repair.Location = new System.Drawing.Point(346, 70);
             this.btn_Repair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Repair.Name = "btn_Repair";
-            this.btn_Repair.Size = new System.Drawing.Size(57, 55);
+            this.btn_Repair.Size = new System.Drawing.Size(57, 67);
             this.btn_Repair.TabIndex = 29;
             this.btn_Repair.Click += new System.EventHandler(this.btn_Repair_Click);
             // 
@@ -302,10 +279,10 @@
             this.btn_Delete.ImageZoom = 30;
             this.btn_Delete.LabelPosition = 29;
             this.btn_Delete.LabelText = "Delete";
-            this.btn_Delete.Location = new System.Drawing.Point(234, 73);
+            this.btn_Delete.Location = new System.Drawing.Point(283, 73);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(57, 55);
+            this.btn_Delete.Size = new System.Drawing.Size(57, 64);
             this.btn_Delete.TabIndex = 28;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
@@ -323,10 +300,10 @@
             this.btn_Add.ImageZoom = 30;
             this.btn_Add.LabelPosition = 29;
             this.btn_Add.LabelText = "Add";
-            this.btn_Add.Location = new System.Drawing.Point(172, 73);
+            this.btn_Add.Location = new System.Drawing.Point(221, 73);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(56, 55);
+            this.btn_Add.Size = new System.Drawing.Size(56, 64);
             this.btn_Add.TabIndex = 27;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
@@ -358,8 +335,7 @@
             this.NameSP,
             this.Price,
             this.IDBlock,
-            this.IDDetail,
-            this.DateSell});
+            this.IDDetail});
             this.dataGid_Device.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGid_Device.DoubleBuffered = true;
             this.dataGid_Device.EnableHeadersVisualStyles = false;
@@ -383,6 +359,74 @@
             this.dataGid_Device.TabIndex = 26;
             this.dataGid_Device.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGid_Device_CellClick);
             this.dataGid_Device.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGid_Device_MouseDown);
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Search.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            this.txt_Search.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
+            this.txt_Search.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            this.txt_Search.BorderThickness = 3;
+            this.txt_Search.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.ForeColor = System.Drawing.Color.White;
+            this.txt_Search.isPassword = false;
+            this.txt_Search.Location = new System.Drawing.Point(493, 83);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Search.MaxLength = 32767;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(194, 36);
+            this.txt_Search.TabIndex = 83;
+            this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Search.OnValueChanged += new System.EventHandler(this.txt_Search_OnValueChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(0, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "ID Products";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pbx_Avatar
+            // 
+            this.pbx_Avatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbx_Avatar.BackgroundImage")));
+            this.pbx_Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbx_Avatar.Location = new System.Drawing.Point(3, 61);
+            this.pbx_Avatar.Margin = new System.Windows.Forms.Padding(2);
+            this.pbx_Avatar.Name = "pbx_Avatar";
+            this.pbx_Avatar.Size = new System.Drawing.Size(97, 84);
+            this.pbx_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_Avatar.TabIndex = 91;
+            this.pbx_Avatar.TabStop = false;
+            // 
+            // btn_ShowDetail
+            // 
+            this.btn_ShowDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ShowDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_ShowDetail.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_ShowDetail.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
+            this.btn_ShowDetail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ShowDetail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ShowDetail.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowDetail.Image = ((System.Drawing.Image)(resources.GetObject("btn_ShowDetail.Image")));
+            this.btn_ShowDetail.ImagePosition = 14;
+            this.btn_ShowDetail.ImageZoom = 30;
+            this.btn_ShowDetail.LabelPosition = 29;
+            this.btn_ShowDetail.LabelText = "Detail";
+            this.btn_ShowDetail.Location = new System.Drawing.Point(107, 61);
+            this.btn_ShowDetail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ShowDetail.Name = "btn_ShowDetail";
+            this.btn_ShowDetail.Size = new System.Drawing.Size(108, 84);
+            this.btn_ShowDetail.TabIndex = 92;
+            this.btn_ShowDetail.Click += new System.EventHandler(this.btn_ShowDetail_Click);
             // 
             // IDSanPham
             // 
@@ -426,183 +470,92 @@
             this.IDDetail.Name = "IDDetail";
             this.IDDetail.ReadOnly = true;
             // 
-            // DateSell
+            // btn_2
             // 
-            this.DateSell.DataPropertyName = "DateSell";
-            this.DateSell.HeaderText = "Date Sell";
-            this.DateSell.Name = "DateSell";
-            this.DateSell.ReadOnly = true;
+            this.btn_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_2.Location = new System.Drawing.Point(115, 151);
+            this.btn_2.Name = "btn_2";
+            this.btn_2.Size = new System.Drawing.Size(116, 23);
+            this.btn_2.TabIndex = 93;
+            this.btn_2.Text = "ID Category";
+            this.btn_2.UseVisualStyleBackColor = false;
             // 
-            // txt_Search
+            // btn_4
             // 
-            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Search.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.txt_Search.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(145)))), ((int)(((byte)(24)))));
-            this.txt_Search.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
-            this.txt_Search.BorderThickness = 3;
-            this.txt_Search.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Search.ForeColor = System.Drawing.Color.White;
-            this.txt_Search.isPassword = false;
-            this.txt_Search.Location = new System.Drawing.Point(493, 83);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Search.MaxLength = 32767;
-            this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(194, 36);
-            this.txt_Search.TabIndex = 83;
-            this.txt_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_Search.OnValueChanged += new System.EventHandler(this.txt_Search_OnValueChanged);
+            this.btn_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_4.Location = new System.Drawing.Point(345, 151);
+            this.btn_4.Name = "btn_4";
+            this.btn_4.Size = new System.Drawing.Size(116, 23);
+            this.btn_4.TabIndex = 95;
+            this.btn_4.Text = "Price";
+            this.btn_4.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_3
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(0, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "ID Products";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_3.Location = new System.Drawing.Point(230, 151);
+            this.btn_3.Name = "btn_3";
+            this.btn_3.Size = new System.Drawing.Size(116, 23);
+            this.btn_3.TabIndex = 94;
+            this.btn_3.Text = "Name";
+            this.btn_3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_6
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(99, 150);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 23);
-            this.button2.TabIndex = 85;
-            this.button2.Text = "ID Category";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_6.Location = new System.Drawing.Point(575, 151);
+            this.btn_6.Name = "btn_6";
+            this.btn_6.Size = new System.Drawing.Size(116, 23);
+            this.btn_6.TabIndex = 97;
+            this.btn_6.Text = "ID Detail";
+            this.btn_6.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_5
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(296, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 23);
-            this.button3.TabIndex = 87;
-            this.button3.Text = "Price";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(197, 150);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 23);
-            this.button4.TabIndex = 86;
-            this.button4.Text = "Name";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(591, 150);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 23);
-            this.button5.TabIndex = 90;
-            this.button5.Text = "DateSell";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(493, 150);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 23);
-            this.button6.TabIndex = 89;
-            this.button6.Text = "ID Detail";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Location = new System.Drawing.Point(394, 150);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 23);
-            this.button7.TabIndex = 88;
-            this.button7.Text = "ID Block";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // pbx_Avatar
-            // 
-            this.pbx_Avatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbx_Avatar.BackgroundImage")));
-            this.pbx_Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbx_Avatar.Location = new System.Drawing.Point(3, 61);
-            this.pbx_Avatar.Margin = new System.Windows.Forms.Padding(2);
-            this.pbx_Avatar.Name = "pbx_Avatar";
-            this.pbx_Avatar.Size = new System.Drawing.Size(97, 84);
-            this.pbx_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_Avatar.TabIndex = 91;
-            this.pbx_Avatar.TabStop = false;
-            // 
-            // btn_ShowDetail
-            // 
-            this.btn_ShowDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ShowDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_ShowDetail.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
-            this.btn_ShowDetail.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(25)))), ((int)(((byte)(198)))));
-            this.btn_ShowDetail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ShowDetail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowDetail.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowDetail.Image = ((System.Drawing.Image)(resources.GetObject("btn_ShowDetail.Image")));
-            this.btn_ShowDetail.ImagePosition = 14;
-            this.btn_ShowDetail.ImageZoom = 30;
-            this.btn_ShowDetail.LabelPosition = 29;
-            this.btn_ShowDetail.LabelText = "Detail";
-            this.btn_ShowDetail.Location = new System.Drawing.Point(109, 73);
-            this.btn_ShowDetail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_ShowDetail.Name = "btn_ShowDetail";
-            this.btn_ShowDetail.Size = new System.Drawing.Size(56, 55);
-            this.btn_ShowDetail.TabIndex = 92;
-            this.btn_ShowDetail.Click += new System.EventHandler(this.btn_ShowDetail_Click);
+            this.btn_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.btn_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_5.Location = new System.Drawing.Point(460, 151);
+            this.btn_5.Name = "btn_5";
+            this.btn_5.Size = new System.Drawing.Size(116, 23);
+            this.btn_5.TabIndex = 96;
+            this.btn_5.Text = "ID Block";
+            this.btn_5.UseVisualStyleBackColor = false;
             // 
             // uct_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
+            this.Controls.Add(this.btn_6);
+            this.Controls.Add(this.btn_5);
+            this.Controls.Add(this.btn_4);
+            this.Controls.Add(this.btn_3);
+            this.Controls.Add(this.btn_2);
             this.Controls.Add(this.btn_ShowDetail);
             this.Controls.Add(this.pbx_Avatar);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Find);
-            this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Repair);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
@@ -624,28 +577,25 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuTileButton btn_Find;
-        private Bunifu.Framework.UI.BunifuTileButton btn_Export;
         private Bunifu.Framework.UI.BunifuTileButton btn_Repair;
         private Bunifu.Framework.UI.BunifuTileButton btn_Delete;
         private Bunifu.Framework.UI.BunifuTileButton btn_Add;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGid_Device;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_Search;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pbx_Avatar;
+        private Bunifu.Framework.UI.BunifuTileButton btn_ShowDetail;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDBlock;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateSell;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pbx_Avatar;
-        private Bunifu.Framework.UI.BunifuTileButton btn_ShowDetail;
+        private System.Windows.Forms.Button btn_2;
+        private System.Windows.Forms.Button btn_4;
+        private System.Windows.Forms.Button btn_3;
+        private System.Windows.Forms.Button btn_6;
+        private System.Windows.Forms.Button btn_5;
     }
 }
